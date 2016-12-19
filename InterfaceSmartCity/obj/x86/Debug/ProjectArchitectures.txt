@@ -1,1 +1,1 @@
-E:\InterfaceSmartCity\InterfaceSmartCity\InterfaceSmartCity.csproj;x86
+C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\SmartPark.csproj;x86

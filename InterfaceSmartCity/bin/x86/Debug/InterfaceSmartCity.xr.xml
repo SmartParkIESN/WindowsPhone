@@ -11,6 +11,7 @@
     <RootPropertyPathName Name="DetailParkingCommand" />
     <RootPropertyPathName Name="Announcements" />
     <RootPropertyPathName Name="Login" />
+    <RootPropertyPathName Name="GoToSignUpCommand" />
     <RootPropertyPathName Name="PasswordUser" />
     <RootPropertyPathName Name="NameUser" />
     <RootPropertyPathName Name="Message" />

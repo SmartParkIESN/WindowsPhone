@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Views;
 using InterfaceSmartCity.Model;
 using System;
@@ -8,13 +9,18 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using System.Xml.Linq;
 
 namespace InterfaceSmartCity.ViewModel {
     public class LoginViewModel : ViewModelBase, INotifyPropertyChanged {
+
         private String _nameUser;
         private String _passwordUser;
 
-        /*public String NameUser {
+        public String NameUser {
             get { return _nameUser; }
             set { OnNotifyPropertyChanged ("NameUser"); }
         }
@@ -22,7 +28,7 @@ namespace InterfaceSmartCity.ViewModel {
         public String PasswordUser {
             get { return _passwordUser; }
             set { OnNotifyPropertyChanged ("PasswordUser"); }
-        } */
+        } 
 
         private ObservableCollection<User>_users;
         public ObservableCollection<User> Users {
@@ -38,13 +44,13 @@ namespace InterfaceSmartCity.ViewModel {
             }
         }
 
-       /* public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnNotifyPropertyChanged(string propertyName) {
             if(PropertyChanged != null) {
             PropertyChanged (this, new PropertyChangedEventArgs (propertyName));
             }
-        }*/
+        }
 
         private INavigationService _navigationService = null;
 
@@ -54,6 +60,26 @@ namespace InterfaceSmartCity.ViewModel {
             //On ajoute un paramètre pour la navigation dans le constructeur
             _navigationService = navigationService;
         }
-        
+
+
+        //Go to Sign Up
+        private ICommand _goToSignUpCommand;
+        public ICommand GoToSignUpCommand
+        {
+            get
+            {
+                if (_goToSignUpCommand == null)
+                    _goToSignUpCommand = new RelayCommand(() => GoToSignUp());
+                return _goToSignUpCommand;
+            }
+        }
+
+        private void GoToSignUp()
+        {
+            _navigationService.NavigateTo("SignUp");
+        }
+        //
+
+
     }
 }

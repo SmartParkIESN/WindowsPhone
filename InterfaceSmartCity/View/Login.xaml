@@ -29,9 +29,9 @@
         <TextBlock Text="Password : " Grid.Row="2" Grid.Column="0" Margin="50,0,-10,0"  VerticalAlignment="Center"></TextBlock>
         <TextBox x:Name="textBoxPassword" Text="{Binding PasswordUser, Mode= TwoWay}" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Center" Margin="10,21.8,10,21.4"/>
 
-        <Button x:Name="login" Content="Login" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="181,33.6,181,9.4" Width="70"></Button>
+        <Button x:Name="login" Command="{Binding LogInCommand}" Content="Login" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="181,33.6,181,9.4" Width="70"></Button>
 
-        <Button x:Name="signup" Content="Sign up" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+        <Button x:Name="signup" Command="{Binding GoToSignUpCommand}" Content="Sign up" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
 
 
     </Grid>
