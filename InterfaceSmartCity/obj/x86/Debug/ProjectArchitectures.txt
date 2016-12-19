@@ -1,0 +1,1 @@
+E:\InterfaceSmartCity\InterfaceSmartCity\InterfaceSmartCity.csproj;x86

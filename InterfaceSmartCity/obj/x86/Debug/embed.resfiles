@@ -1,0 +1,11 @@
+App.xbf
+MainPage.xbf
+View\CreateAnnouncement.xbf
+View\CreateParking.xbf
+View\DetailParking.xbf
+View\ListParking.xbf
+View\Login.xbf
+View\Message.xbf
+View\Profile.xbf
+View\SearchParking.xbf
+View\SignUp.xbf

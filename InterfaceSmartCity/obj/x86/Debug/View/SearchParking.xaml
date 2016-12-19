@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="InterfaceSmartCity.View.SearchParking"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:InterfaceSmartCity.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Source={StaticResource Locator}, Path=SearchParking}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="216"></ColumnDefinition>
+            <ColumnDefinition Width="216"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Date" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,45,174,10.2" FontWeight="Bold"></TextBlock>
+        <TextBlock Text="From" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,28,171,27.2"></TextBlock>
+        <TextBlock Text="To" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,28,190,27.2"></TextBlock>
+        <TextBlock Text="Price" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,44.6,173,10.4" FontWeight="Bold"></TextBlock>
+        <TextBlock Text="From" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="11,27.8,170,27.4"></TextBlock>
+        <TextBlock Text="To" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="11,27.8,189,27.4"></TextBlock>
+        <TextBlock Text="Place" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="12,45,169,10.2" FontWeight="Bold"></TextBlock>
+        <ComboBox x:ConnectionId='1' x:Name="comboBox" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="12,21.8,121,21.4" Width="83"/>
+        <Button x:ConnectionId='2' x:Name="search" Content="Search" Grid.Row="7" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+        <ComboBox x:ConnectionId='3' x:Name="comboBoxDateFrom" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="92,22,60,21.2"/>
+        <ComboBox x:ConnectionId='4' x:Name="comboBoxDateTo" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,22,76,21.2"/>
+        <ComboBox x:ConnectionId='5' x:Name="comboBoxPriceFrom" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="93,21.8,59,21.4"/>
+        <ComboBox x:ConnectionId='6' x:Name="comboBoxPriceTo" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,21.8,76,21.4"/>
+        <CheckBox x:ConnectionId='7' x:Name="checkBox" Content="Based on my position" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="12,21.2,10,22" Width="410"/>
+
+    </Grid>
+</Page>
+
