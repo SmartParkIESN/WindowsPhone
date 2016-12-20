@@ -248,3 +248,4 @@ C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\resources.e
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\resources.en-us.resfiles.intermediate
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\GalaSoft.MvvmLight.Platform.pri.xml
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\bin\x86\Debug\Newtonsoft.Json.dll

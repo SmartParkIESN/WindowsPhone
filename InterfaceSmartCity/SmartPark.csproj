@@ -98,17 +98,14 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\AllAnnouncements.cs" />
-    <Compile Include="Model\AllParkings.cs" />
-    <Compile Include="Model\AllPlaces.cs" />
-    <Compile Include="Model\AllReportings.cs" />
-    <Compile Include="Model\AllUsers.cs" />
     <Compile Include="Model\Announcement.cs" />
     <Compile Include="Model\Parking.cs" />
     <Compile Include="Model\Place.cs" />
     <Compile Include="Model\Reporting.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AnnouncementDAO.cs" />
+    <Compile Include="Services\UserDAO.cs" />
     <Compile Include="ViewModel\CreateAnnouncementViewModel.cs" />
     <Compile Include="ViewModel\CreateParkingViewModel.cs" />
     <Compile Include="ViewModel\DetailParkingViewModel.cs" />

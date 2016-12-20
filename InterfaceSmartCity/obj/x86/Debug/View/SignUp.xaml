@@ -16,6 +16,7 @@
             <RowDefinition Height="75"></RowDefinition>
             <RowDefinition Height="75"></RowDefinition>
             <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -24,18 +25,24 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Text="Pseudo : " Grid.Row="0" Grid.Column="0" Margin="69,28,10,27.2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="137"></TextBlock>
-        <TextBox x:ConnectionId='1' x:Name="textBoxPseudo" Grid.Row="0" Grid.Column="1" TextWrapping="Wrap" Text="Pseudo" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,22,136,21.2" Width="70"/>
+        <TextBox x:ConnectionId='1' x:Name="textBoxPseudo" Grid.Row="0" Grid.Column="1" TextWrapping="Wrap" Text="{Binding Pseudo, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,22,136,21.2" Width="70"/>
 
         <TextBlock Text="Email : " Grid.Row="1" Grid.Column="0" Margin="69,27.8,10,27.4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="137"></TextBlock>
-        <TextBox x:ConnectionId='2' x:Name="textBoxEmail1" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="Email 2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,21.8,136,21.4" Width="70"/>
+        <TextBox x:ConnectionId='2' x:Name="textBoxEmail1" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="{Binding Mail, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,21.8,136,21.4" Width="70"/>
 
-        <TextBlock Text="Confirmation email : " Grid.Row="2" Grid.Column="0" Margin="69,27.6,10,27.6" HorizontalAlignment="Center" VerticalAlignment="Center" Width="137"></TextBlock>
-        <TextBox x:ConnectionId='3' x:Name="textBoxEmail2" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Text="Email 1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,21.6,136,21.6" Width="70"/>
+        <TextBlock Text="Password : " Grid.Row="2" Grid.Column="0" Margin="69,27.6,10,27.6" HorizontalAlignment="Center" VerticalAlignment="Center" Width="137"></TextBlock>
+        <TextBox x:ConnectionId='3' x:Name="textBoxPassword" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Text="{Binding Password, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,21.6,136,21.6" Width="70"/>
 
-        <TextBlock Text="Phone number : " Grid.Row="3" Grid.Column="0" Margin="69,27.4,10,27.8" HorizontalAlignment="Center" VerticalAlignment="Center" Width="137"></TextBlock>
-        <TextBox x:ConnectionId='4' x:Name="textBoxPhone" Grid.Row="3" Grid.Column="1" TextWrapping="Wrap" Text="Phone" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,21.4,136,21.8" Width="70"/>
+        <TextBlock Text="Password conf : " Grid.Row="3" Grid.Column="0" Margin="69,27.4,10,27.8" HorizontalAlignment="Center" VerticalAlignment="Center" Width="137"></TextBlock>
+        <TextBox x:ConnectionId='4' x:Name="textBoxPassword2" Grid.Row="3" Grid.Column="1" TextWrapping="Wrap" Text="{Binding PasswordConf, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,21.4,136,21.8" Width="70"/>
 
-        <Button x:ConnectionId='5' x:Name="signup" Content="Sign up" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+        <TextBlock Text="Phone number : " Grid.Row="4" Grid.Column="0" Margin="69,27.4,10,27.8" HorizontalAlignment="Center" VerticalAlignment="Center" Width="137"></TextBlock>
+        <TextBox x:ConnectionId='5' x:Name="textBoxPhone" Grid.Row="4" Grid.Column="1" TextWrapping="Wrap" Text="{Binding PhoneNumber, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,21.4,136,21.8" Width="70"/>
+
+
+        <Button x:ConnectionId='6' x:Name="signup" Command="{Binding SignUpCommand}" Content="Sign up" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+
+        <TextBlock Text="{Binding InfosSignUp, Mode=TwoWay}" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="50" Width="300" VerticalAlignment="Center"></TextBlock>
 
 
     </Grid>

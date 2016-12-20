@@ -11,13 +11,22 @@
     <RootPropertyPathName Name="DetailParkingCommand" />
     <RootPropertyPathName Name="Announcements" />
     <RootPropertyPathName Name="Login" />
+    <RootPropertyPathName Name="InfoConnection" />
     <RootPropertyPathName Name="GoToSignUpCommand" />
+    <RootPropertyPathName Name="LogInCommand" />
     <RootPropertyPathName Name="PasswordUser" />
     <RootPropertyPathName Name="NameUser" />
     <RootPropertyPathName Name="Message" />
     <RootPropertyPathName Name="Profile" />
     <RootPropertyPathName Name="SearchParking" />
     <RootPropertyPathName Name="SignUp" />
+    <RootPropertyPathName Name="InfosSignUp" />
+    <RootPropertyPathName Name="SignUpCommand" />
+    <RootPropertyPathName Name="PhoneNumber" />
+    <RootPropertyPathName Name="PasswordConf" />
+    <RootPropertyPathName Name="Password" />
+    <RootPropertyPathName Name="Mail" />
+    <RootPropertyPathName Name="Pseudo" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -81,6 +90,7 @@
       <RootProperty Name="FontWeight" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />

@@ -7,14 +7,12 @@ using System.Threading.Tasks;
 
 namespace InterfaceSmartCity.Model {
     public class Place {
-        public long Id { get; set; }
+        public long PlaceId { get; set; }
         public String Name { get; set; }
-        public List<Parking> Parkings { get; set; }
 
         public Place(long id, String name) {
-            Id = id;
+            PlaceId = id;
             Name = name;
-            Parkings = new List<Parking> ();
         }
     }
 }

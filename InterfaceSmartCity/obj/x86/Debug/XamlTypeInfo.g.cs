@@ -226,7 +226,6 @@ namespace InterfaceSmartCity.SmartPark_XamlTypeInfo
         private object Activate_8_MessageViewModel() { return new global::InterfaceSmartCity.ViewModel.MessageViewModel(); }
         private object Activate_9_ProfileViewModel() { return new global::InterfaceSmartCity.ViewModel.ProfileViewModel(); }
         private object Activate_10_SearchParkingViewModel() { return new global::InterfaceSmartCity.ViewModel.SearchParkingViewModel(); }
-        private object Activate_11_SignUpViewModel() { return new global::InterfaceSmartCity.ViewModel.SignUpViewModel(); }
         private object Activate_13_MainPage() { return new global::InterfaceSmartCity.MainPage(); }
         private object Activate_16_CreateAnnouncement() { return new global::InterfaceSmartCity.View.CreateAnnouncement(); }
         private object Activate_17_CreateParking() { return new global::InterfaceSmartCity.View.CreateParking(); }
@@ -329,7 +328,7 @@ namespace InterfaceSmartCity.SmartPark_XamlTypeInfo
                 break;
 
             case 11:   //  InterfaceSmartCity.ViewModel.SignUpViewModel
-                userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;

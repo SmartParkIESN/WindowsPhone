@@ -9,14 +9,14 @@ namespace InterfaceSmartCity.Model {
     public class Reporting {
         public long Id { get; set; }
         public DateTime Date { get; set; }
-        public Announcement Signaled { get; set; }
-        public User SignalMan { get; set; }
+        public Announcement Announcement { get; set; }
+        public long IdAnnouncement { get; set; }
 
-        public Reporting(long id, DateTime date, Announcement signaled, User signalMan) {
+        public Reporting(long id, DateTime date, Announcement announcement, long idAnnouncement) {
             Id = id;
             Date = date;
-            Signaled = signaled;
-            SignalMan = signalMan;
+            Announcement = announcement;
+            IdAnnouncement = IdAnnouncement;
         }
     }
 }

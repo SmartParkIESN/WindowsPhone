@@ -13,49 +13,56 @@ using System.Windows.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using System.Xml.Linq;
+using InterfaceSmartCity.Services;
 
 namespace InterfaceSmartCity.ViewModel {
     public class LoginViewModel : ViewModelBase, INotifyPropertyChanged {
 
         private String _nameUser;
         private String _passwordUser;
+        private String _InfoConnection;
 
         public String NameUser {
             get { return _nameUser; }
-            set { OnNotifyPropertyChanged ("NameUser"); }
+            set
+            {
+                _nameUser = value;
+                OnNotifyPropertyChanged("NameUser");
+            }
         }
 
         public String PasswordUser {
             get { return _passwordUser; }
-            set { OnNotifyPropertyChanged ("PasswordUser"); }
-        } 
-
-        private ObservableCollection<User>_users;
-        public ObservableCollection<User> Users {
-            get { return _users; }
-            set {
-                _users = value;
-                /*
-                 * Dans la propriété, nous devons y signaler de faire attention aux changements.
-                 * Celà se fait grâce à RaisePropertyChanged, 
-                 * l'argument de cette méthode est le nom de la propriété.
-                 */
-                RaisePropertyChanged ("Students");
+            set
+            {
+                _passwordUser = value;
+                OnNotifyPropertyChanged("PasswordUser");
             }
         }
+
+        public String InfoConnection
+        {
+            get { return _InfoConnection; }
+            set
+            {
+                _InfoConnection = value;
+                OnNotifyPropertyChanged("InfoConnection");
+            }
+        }
+
+        
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnNotifyPropertyChanged(string propertyName) {
             if(PropertyChanged != null) {
-            PropertyChanged (this, new PropertyChangedEventArgs (propertyName));
+            PropertyChanged (this, new PropertyChangedEventArgs(propertyName));
             }
         }
 
         private INavigationService _navigationService = null;
 
         public LoginViewModel (INavigationService navigationService) {
-            Users = new ObservableCollection<User> (AllUsers.GetAllUsers ());
 
             //On ajoute un paramètre pour la navigation dans le constructeur
             _navigationService = navigationService;
@@ -79,6 +86,42 @@ namespace InterfaceSmartCity.ViewModel {
             _navigationService.NavigateTo("SignUp");
         }
         //
+
+        //Log In
+        private ICommand _logInCommand;
+        public ICommand LogInCommand
+        {
+            get
+            {
+                if (_logInCommand == null)
+                    _logInCommand = new RelayCommand(() => LogIn());
+                return _logInCommand;
+            }
+        }
+
+        private async void LogIn()
+        {
+            UserDAO userDAO = new UserDAO();
+            Boolean result = false;
+
+            try
+            {
+               result = await userDAO.logIn(NameUser, PasswordUser);
+            }
+            catch (Exception ex)
+            {
+                InfoConnection = "Login error";
+            }
+
+             if (result)
+             {
+                _navigationService.NavigateTo("ListParking");
+            }
+             else
+             {
+                InfoConnection = "Login error";
+            }
+        }
 
 
     }

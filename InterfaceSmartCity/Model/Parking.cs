@@ -7,20 +7,26 @@ using System.Threading.Tasks;
 
 namespace InterfaceSmartCity.Model {
     public class Parking {
-        public long Id { get; set; }
+        public long ParkingId { get; set; }
         public String Name { get; set; }
         public String Street { get; set; }
         public String Number { get; set; }
         public String Picture { get; set; }
         public String Description { get; set; }
-        public long Longitude { get; set; }
-        public long Latitude { get; set; }
+        public float Longitude { get; set; }
+        public float Latitude { get; set; }
         public Place Place { get; set; }
         public User User { get; set; }
-        public List<Announcement> Announcements { get; set; }
+        public long PlaceId { get; set; }
+        public long UserId { get; set; }
 
-        public Parking(long id, String name, String street, String number, String picture, String description, long longitude, long latitude, Place place, User user) {
-            Id = id;
+        public Parking()
+        {
+
+        }
+
+        public Parking(long id, String name, String street, String number, String picture, String description, float longitude, float latitude, Place place, User user, long placeId, long userId) {
+            ParkingId = id;
             Name = name;
             Street = street;
             Picture = picture;
@@ -29,9 +35,8 @@ namespace InterfaceSmartCity.Model {
             Latitude = latitude;
             Place = place;
             User = user;
-            Announcements = new List<Announcement> ();
-
-
+            PlaceId = placeId;
+            UserId = userId;
         }
 
     }
