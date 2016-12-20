@@ -8,10 +8,41 @@
     mc:Ignorable="d"
     DataContext="{Binding Source={StaticResource Locator}, Path=ListParking}">
 
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" 
+               CompactPaneLength="50" OpenPaneLength="150">
+            <SplitView.Pane>
+                <StackPanel Background="Gray">
+                    <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
+                    Width="50" Height="50" Background="Transparent"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="MenuButton1" FontFamily="Segoe MDL2 Assets" Content="&#xE825;"
+                    Width="50" Height="50" Background="Transparent"/>
+                        <TextBlock Text="Button 1" FontSize="18" VerticalAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
+                        Width="50" Height="50" Background="Transparent"/>
+                        <TextBlock Text="Button 2" FontSize="18" VerticalAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="MenuButton3" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                        Width="50" Height="50" Background="Transparent"/>
+                        <TextBlock Text="Button 3" FontSize="18" VerticalAlignment="Center" />
+                    </StackPanel>
+                </StackPanel>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Grid>
+                    <TextBlock Text="SplitView Basic" FontSize="54" Foreground="White"
+                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </SplitView.Content>
+        </SplitView>
         
-        
-        <ListView ItemsSource="{Binding Announcements, Mode=TwoWay}" SelectedItem="{Binding SelectedAnnouncement, Mode=TwoWay}" Margin="0,-10,0,10">
+        <ListView ItemsSource="{Binding Announcements, Mode=TwoWay}" SelectedItem="{Binding SelectedAnnouncement, Mode=TwoWay}" Margin="50,-10,0,10">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Background="White">
@@ -26,6 +57,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button x:Name="button" Command="{Binding DetailParkingCommand}" Content="Voir les détails de l'annonce sélectionné" HorizontalAlignment="Left" Margin="10,383,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button" Command="{Binding DetailParkingCommand}" Content="Voir les détails de l'annonce sélectionné" HorizontalAlignment="Left" Margin="50,383,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>
