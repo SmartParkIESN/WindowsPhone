@@ -24,7 +24,11 @@ namespace InterfaceSmartCity.Services
             {
                 if (user.Password.Equals(password))
                 {
-                    return true;
+                    UserConnected userConnected = new UserConnected();
+                    userConnected = userConnected.getINSTANCE();
+                    userConnected.setUser(user);
+                    userConnected.setConnected(true);
+                    return true;               
                 }
                 else
                 {
@@ -41,7 +45,7 @@ namespace InterfaceSmartCity.Services
         {
             User user = new User();
             HttpClient client = new HttpClient();
-            String url = "http://smartpark1.azurewebsites.net/api/Users/" + pseudo;
+            String url = "http://smartpark1.azurewebsites.net/api/Users/pseudo/" + pseudo;
             var usersJson = await client.GetStringAsync(new Uri(url));
             dynamic userElement = JObject.Parse(usersJson);
             user.UserId = userElement.UserId;
@@ -60,6 +64,18 @@ namespace InterfaceSmartCity.Services
             var result = await client.PostAsync("http://smartpark1.azurewebsites.net/api/Users", content);
 
             return "Succesfull";
+
+        }
+
+        public async Task<Boolean> ModifyUser(User user)
+        {
+            var client = new HttpClient();
+            string jsonUser = JsonConvert.SerializeObject(user);
+            var content = new StringContent(jsonUser, Encoding.UTF8, "application/json");
+            String url = "http://smartpark1.azurewebsites.net/api/Users/" + user.UserId.ToString();
+            var result = await client.PutAsync(url, content);
+
+            return true;
 
         }
     }

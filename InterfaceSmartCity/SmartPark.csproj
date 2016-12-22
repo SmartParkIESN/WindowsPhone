@@ -105,15 +105,17 @@
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AnnouncementDAO.cs" />
+    <Compile Include="Services\UserConnected.cs" />
     <Compile Include="Services\UserDAO.cs" />
     <Compile Include="ViewModel\CreateAnnouncementViewModel.cs" />
     <Compile Include="ViewModel\CreateParkingViewModel.cs" />
-    <Compile Include="ViewModel\DetailParkingViewModel.cs" />
-    <Compile Include="ViewModel\ListParkingViewModel.cs" />
+    <Compile Include="ViewModel\DetailViewModel.cs" />
+    <Compile Include="ViewModel\MyAnnouncementsViewModel.cs" />
+    <Compile Include="ViewModel\WelcomeViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MessageViewModel.cs" />
     <Compile Include="ViewModel\ProfileViewModel.cs" />
-    <Compile Include="ViewModel\SearchParkingViewModel.cs" />
+    <Compile Include="ViewModel\SearchViewModel.cs" />
     <Compile Include="ViewModel\SignUpViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\CreateAnnouncement.xaml.cs">
@@ -122,11 +124,14 @@
     <Compile Include="View\CreateParking.xaml.cs">
       <DependentUpon>CreateParking.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\DetailParking.xaml.cs">
-      <DependentUpon>DetailParking.xaml</DependentUpon>
+    <Compile Include="View\Detail.xaml.cs">
+      <DependentUpon>Detail.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ListParking.xaml.cs">
-      <DependentUpon>ListParking.xaml</DependentUpon>
+    <Compile Include="View\MyAnnouncements.xaml.cs">
+      <DependentUpon>MyAnnouncements.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Welcome.xaml.cs">
+      <DependentUpon>Welcome.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
@@ -137,8 +142,8 @@
     <Compile Include="View\Profile.xaml.cs">
       <DependentUpon>Profile.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\SearchParking.xaml.cs">
-      <DependentUpon>SearchParking.xaml</DependentUpon>
+    <Compile Include="View\Search.xaml.cs">
+      <DependentUpon>Search.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
@@ -151,6 +156,8 @@
     <None Include="InterfaceSmartCity_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\place.jpg" />
+    <Content Include="Assets\smartparklogo.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -177,11 +184,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\DetailParking.xaml">
+    <Page Include="View\Detail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\ListParking.xaml">
+    <Page Include="View\MyAnnouncements.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Welcome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -197,7 +208,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\SearchParking.xaml">
+    <Page Include="View\Search.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

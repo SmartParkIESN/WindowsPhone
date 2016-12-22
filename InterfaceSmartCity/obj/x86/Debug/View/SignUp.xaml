@@ -17,6 +17,7 @@
             <RowDefinition Height="75"></RowDefinition>
             <RowDefinition Height="75"></RowDefinition>
             <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -41,8 +42,9 @@
 
 
         <Button x:ConnectionId='6' x:Name="signup" Command="{Binding SignUpCommand}" Content="Sign up" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+        <Button x:ConnectionId='7' x:Name="back" Command="{Binding GoBackCommand}" Content="Back" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
 
-        <TextBlock Text="{Binding InfosSignUp, Mode=TwoWay}" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="50" Width="300" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="{Binding InfosSignUp, Mode=TwoWay}" Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="50" Width="300" VerticalAlignment="Center"></TextBlock>
 
 
     </Grid>

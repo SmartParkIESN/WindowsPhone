@@ -128,6 +128,23 @@ namespace InterfaceSmartCity.ViewModel {
         }
         //
 
+        //Go Back
+        private ICommand _goBackCommand;
+        public ICommand GoBackCommand
+        {
+            get
+            {
+                if (_goBackCommand == null)
+                    _goBackCommand = new RelayCommand(() => GoBack());
+                return _goBackCommand;
+            }
+        }
+
+        private void GoBack()
+        {
+            _navigationService.NavigateTo("Login");
+        }
+
 
 
     }

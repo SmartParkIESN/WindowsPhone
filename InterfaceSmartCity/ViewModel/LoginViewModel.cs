@@ -115,7 +115,7 @@ namespace InterfaceSmartCity.ViewModel {
 
              if (result)
              {
-                _navigationService.NavigateTo("ListParking");
+                _navigationService.NavigateTo("Welcome");
             }
              else
              {

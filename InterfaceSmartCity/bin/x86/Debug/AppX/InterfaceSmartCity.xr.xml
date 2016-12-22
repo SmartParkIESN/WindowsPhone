@@ -4,12 +4,24 @@
     <RootPropertyPathName Name="CreateAnnouncement" />
     <RootPropertyPathName Name="CreateParking" />
     <RootPropertyPathName Name="DetailParking" />
+    <RootPropertyPathName Name="Location" />
+    <RootPropertyPathName Name="GoBackCommand" />
     <RootPropertyPathName Name="SelectedAnnouncement" />
-    <RootPropertyPathName Name="Price" />
+    <RootPropertyPathName Name="Parking" />
+    <RootPropertyPathName Name="Description" />
     <RootPropertyPathName Name="Title" />
-    <RootPropertyPathName Name="ListParking" />
-    <RootPropertyPathName Name="DetailParkingCommand" />
+    <RootPropertyPathName Name="MyAnnouncements" />
     <RootPropertyPathName Name="Announcements" />
+    <RootPropertyPathName Name="Price" />
+    <RootPropertyPathName Name="EditAnnouncementCommand" />
+    <RootPropertyPathName Name="RemoveAnnouncementCommand" />
+    <RootPropertyPathName Name="AddAnnouncementCommand" />
+    <RootPropertyPathName Name="ListParking" />
+    <RootPropertyPathName Name="GoSearchCommand" />
+    <RootPropertyPathName Name="GoLogoutCommand" />
+    <RootPropertyPathName Name="GoMyProfilCommand" />
+    <RootPropertyPathName Name="GoMyParkingsCommand" />
+    <RootPropertyPathName Name="GoMyAnnouncementsCommand" />
     <RootPropertyPathName Name="Login" />
     <RootPropertyPathName Name="InfoConnection" />
     <RootPropertyPathName Name="GoToSignUpCommand" />
@@ -18,15 +30,18 @@
     <RootPropertyPathName Name="NameUser" />
     <RootPropertyPathName Name="Message" />
     <RootPropertyPathName Name="Profile" />
-    <RootPropertyPathName Name="SearchParking" />
-    <RootPropertyPathName Name="SignUp" />
-    <RootPropertyPathName Name="InfosSignUp" />
-    <RootPropertyPathName Name="SignUpCommand" />
+    <RootPropertyPathName Name="InfosEdit" />
+    <RootPropertyPathName Name="EditCommand" />
     <RootPropertyPathName Name="PhoneNumber" />
     <RootPropertyPathName Name="PasswordConf" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="Mail" />
     <RootPropertyPathName Name="Pseudo" />
+    <RootPropertyPathName Name="SearchParking" />
+    <RootPropertyPathName Name="SearchCommand" />
+    <RootPropertyPathName Name="SignUp" />
+    <RootPropertyPathName Name="InfosSignUp" />
+    <RootPropertyPathName Name="SignUpCommand" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -43,6 +58,7 @@
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Children" />
+      <RootProperty Name="Margin" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
       <RootMethod Name="GetColumn" />
@@ -86,10 +102,9 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="Foreground" />
       <RootProperty Name="FontWeight" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="TextWrapping" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
@@ -100,10 +115,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Command" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="FontFamily" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Background" />
     </RootType>
     <RootType FullName="InterfaceSmartCity.View.CreateAnnouncement" />
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
@@ -115,14 +127,23 @@
       <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="InterfaceSmartCity.View.CreateParking" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Source" />
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Maps.MapControl">
+      <RootProperty Name="Center" />
+      <RootProperty Name="ZoomLevel" />
+      <RootProperty Name="MapServiceToken" />
+    </RootType>
     <RootType FullName="InterfaceSmartCity.View.DetailParking" />
-    <RootType FullName="Windows.UI.Xaml.Controls.SplitView">
-      <RootProperty Name="DisplayMode" />
-      <RootProperty Name="IsPaneOpen" />
-      <RootProperty Name="CompactPaneLength" />
-      <RootProperty Name="OpenPaneLength" />
-      <RootProperty Name="Pane" />
+    <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
+      <RootProperty Name="PrimaryCommands" />
       <RootProperty Name="Content" />
+      <RootProperty Name="SecondaryCommands" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
@@ -133,19 +154,15 @@
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
-      <RootProperty Name="Background" />
-      <RootProperty Name="Children" />
-      <RootProperty Name="Orientation" />
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
+      <RootProperty Name="Icon" />
+      <RootProperty Name="Label" />
+      <RootProperty Name="Command" />
     </RootType>
+    <RootType FullName="InterfaceSmartCity.View.MyAnnouncements" />
     <RootType FullName="InterfaceSmartCity.View.ListParking" />
     <RootType FullName="InterfaceSmartCity.View.Login" />
     <RootType FullName="InterfaceSmartCity.View.Message" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Primitives.FlyoutBase">
-      <RootMethod Name="GetAttachedFlyout" />
-      <RootMethod Name="SetAttachedFlyout" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyout" />
     <RootType FullName="InterfaceSmartCity.View.Profile" />
     <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
       <RootProperty Name="Content" />

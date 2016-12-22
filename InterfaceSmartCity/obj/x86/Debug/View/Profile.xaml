@@ -9,10 +9,11 @@
     DataContext="{Binding Source={StaticResource Locator}, Path=Profile}">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <FlyoutBase.AttachedFlyout>
-            <MenuFlyout/>
-        </FlyoutBase.AttachedFlyout>
         <Grid.RowDefinitions>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
             <RowDefinition Height="75"></RowDefinition>
             <RowDefinition Height="75"></RowDefinition>
             <RowDefinition Height="75"></RowDefinition>
@@ -24,16 +25,25 @@
             <ColumnDefinition Width="216"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Text="Pseudo : " Grid.Row="0" Grid.Column="0" Margin="101,40,34,15.2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="81"/>
-        <TextBlock Text="Chronix" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,40,121,15.2" Width="85"/>
+        <TextBlock Text="Pseudo : " Grid.Row="0" Grid.Column="0" Margin="80,40,34,15.2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100"/>
+        <TextBlock Text="{Binding Pseudo, Mode=TwoWay}" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,40,121,15.2" Width="85"/>
 
-        <TextBlock Text="Email : " Grid.Row="1" Grid.Column="0" Margin="101,27.8,40,27.4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75"/>
-        <TextBlock Text="alexandre.jottard@gmail.com" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,27.8,50,27.4" Width="156"/>
+        <TextBlock Text="Email : " Grid.Row="1" Grid.Column="0" Margin="80,27.8,40,27.4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100"/>
+        <TextBox x:ConnectionId='1' x:Name="textBoxEMail" Text="{Binding Mail, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,21.6,87,21.6" Width="119"/>
 
-        <TextBlock Text="Phone number : " Grid.Row="2" Grid.Column="0" Margin="101,27.6,9,27.6" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox x:ConnectionId='1' x:Name="textBoxPhoneNumber" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Text="Phone number" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,21.6,87,21.6" Width="119"/>
+        <TextBlock Text="Password : " Grid.Row="2" Grid.Column="0" Margin="80,27.8,40,27.4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100"/>
+        <TextBox x:ConnectionId='2' x:Name="textBoxPassword" Text="{Binding Password, Mode=TwoWay}" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,21.6,87,21.6" Width="119"/>
 
-        <Button x:ConnectionId='2' x:Name="edit" Content="Edit" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Text="Password conf : " Grid.Row="3" Grid.Column="0" Margin="80,27.8,40,27.4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100"/>
+        <TextBox x:ConnectionId='3' x:Name="textBoxPasswordConf" Text="{Binding PasswordConf, Mode=TwoWay}" Grid.Row="3" Grid.Column="1" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,21.6,87,21.6" Width="119"/>
+
+        <TextBlock Text="Phone number : " Grid.Row="4" Grid.Column="0" Margin="80,27.8,40,27.4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100"/>
+        <TextBox x:ConnectionId='4' x:Name="textBoxPhoneNumber" Text="{Binding PhoneNumber, Mode=TwoWay}" Grid.Row="4" Grid.Column="1" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,21.6,87,21.6" Width="119"/>
+
+        <Button x:ConnectionId='5' x:Name="edit" Command="{Binding EditCommand}" Content="Edit" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="119"/>
+        <Button x:ConnectionId='6' x:Name="back" Command="{Binding GoBackCommand}" Content="Back" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="119"/>
+
+        <TextBlock Text="{Binding InfosEdit, Mode=TwoWay}" Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="50" Width="300" VerticalAlignment="Center"></TextBlock>
 
     </Grid>
 </Page>

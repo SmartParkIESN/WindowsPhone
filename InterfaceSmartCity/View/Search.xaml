@@ -8,16 +8,19 @@
     mc:Ignorable="d"
     DataContext="{Binding Source={StaticResource Locator}, Path=SearchParking}">
 
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="75"></RowDefinition>
-            <RowDefinition Height="75"></RowDefinition>
-            <RowDefinition Height="75"></RowDefinition>
-            <RowDefinition Height="75"></RowDefinition>
-            <RowDefinition Height="75"></RowDefinition>
-            <RowDefinition Height="75"></RowDefinition>
-            <RowDefinition Height="75"></RowDefinition>
-            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -33,7 +36,8 @@
         <TextBlock Text="To" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="11,27.8,189,27.4"></TextBlock>
         <TextBlock Text="Place" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="12,45,169,10.2" FontWeight="Bold"></TextBlock>
         <ComboBox x:Name="comboBox" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="12,21.8,121,21.4" Width="83"/>
-        <Button x:Name="search" Content="Search" Grid.Row="7" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+        <Button Command="{Binding SearchCommand}" x:Name="search" Content="Search" Grid.Row="7" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+        <Button Command="{Binding GoBackCommand}" x:Name="back" Content="Back" Grid.Row="8" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
         <ComboBox x:Name="comboBoxDateFrom" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="92,22,60,21.2"/>
         <ComboBox x:Name="comboBoxDateTo" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,22,76,21.2"/>
         <ComboBox x:Name="comboBoxPriceFrom" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="93,21.8,59,21.4"/>

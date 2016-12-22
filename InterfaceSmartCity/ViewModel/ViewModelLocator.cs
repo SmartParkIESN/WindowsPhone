@@ -14,25 +14,27 @@ namespace InterfaceSmartCity.ViewModel {
             ServiceLocator.SetLocatorProvider (() => SimpleIoc.Default);
             SimpleIoc.Default.Register<CreateAnnouncementViewModel> ();
             SimpleIoc.Default.Register<CreateParkingViewModel> ();
-            SimpleIoc.Default.Register<DetailParkingViewModel> ();
+            SimpleIoc.Default.Register<DetailViewModel> ();
             SimpleIoc.Default.Register<LoginViewModel> ();
             SimpleIoc.Default.Register<MessageViewModel> ();
             SimpleIoc.Default.Register<ProfileViewModel> ();
-            SimpleIoc.Default.Register<SearchParkingViewModel> ();
+            SimpleIoc.Default.Register<SearchViewModel> ();
             SimpleIoc.Default.Register<SignUpViewModel> ();
-            SimpleIoc.Default.Register<ListParkingViewModel> ();
+            SimpleIoc.Default.Register<WelcomeViewModel> ();
+            SimpleIoc.Default.Register<MyAnnouncementsViewModel>();
 
             NavigationService navigationPages = new NavigationService ();
             SimpleIoc.Default.Register<INavigationService> (() => navigationPages);
             navigationPages.Configure ("CreateAnnouncement", typeof (CreateAnnouncement));
             navigationPages.Configure ("CreateParking", typeof (CreateParking));
             navigationPages.Configure ("DetailParking", typeof (DetailParking));
-            navigationPages.Configure ("LoginViewModel", typeof (LoginViewModel));
+            navigationPages.Configure ("Login", typeof (Login));
             navigationPages.Configure ("Message", typeof (Message));
-            navigationPages.Configure ("ProfileViewModel", typeof (ProfileViewModel));
+            navigationPages.Configure ("Profile", typeof (Profile));
             navigationPages.Configure ("SearchParking", typeof (SearchParking));
             navigationPages.Configure ("SignUp", typeof (SignUp));
-            navigationPages.Configure ("ListParking", typeof (ListParking));
+            navigationPages.Configure ("Welcome", typeof (ListParking));
+            navigationPages.Configure("MyAnnouncements", typeof(MyAnnouncements));
         }
 
         public LoginViewModel Login {
@@ -53,9 +55,9 @@ namespace InterfaceSmartCity.ViewModel {
             }
         }
 
-        public DetailParkingViewModel DetailParking {
+        public DetailViewModel DetailParking {
             get {
-                return ServiceLocator.Current.GetInstance<DetailParkingViewModel> ();
+                return ServiceLocator.Current.GetInstance<DetailViewModel> ();
             }
         }
 
@@ -71,9 +73,9 @@ namespace InterfaceSmartCity.ViewModel {
             }
         }
 
-        public SearchParkingViewModel SearchParking {
+        public SearchViewModel SearchParking {
             get {
-                return ServiceLocator.Current.GetInstance<SearchParkingViewModel> ();
+                return ServiceLocator.Current.GetInstance<SearchViewModel> ();
             }
         }
 
@@ -83,9 +85,17 @@ namespace InterfaceSmartCity.ViewModel {
             }
         }
 
-        public ListParkingViewModel ListParking {
+        public WelcomeViewModel ListParking {
             get {
-                return ServiceLocator.Current.GetInstance<ListParkingViewModel> ();
+                return ServiceLocator.Current.GetInstance<WelcomeViewModel> ();
+            }
+        }
+
+        public MyAnnouncementsViewModel MyAnnouncements
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<MyAnnouncementsViewModel>();
             }
         }
     }

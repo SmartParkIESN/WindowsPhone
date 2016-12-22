@@ -10,7 +10,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
             <RowDefinition Height="75"></RowDefinition>
             <RowDefinition Height="75"></RowDefinition>
             <RowDefinition Height="75"></RowDefinition>
@@ -22,8 +22,8 @@
             <ColumnDefinition Width="216"></ColumnDefinition>
             <ColumnDefinition Width="216"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-
-        <Rectangle Fill="#FFF4F4F5" Grid.ColumnSpan="2" HorizontalAlignment="Left" Stroke="Black" Height="120" Width="432"/>
+        
+        <Image Source="/Assets/smartparklogo.png" Grid.ColumnSpan="2" HorizontalAlignment="Center" Width="150" Height="150"/>
         <TextBlock Text="Pseudo : " Grid.Row="1" Grid.Column="0" Margin="50,0,-10,0" VerticalAlignment="Center"></TextBlock>
         <TextBox x:Name="textBoxPseudo" Text="{Binding NameUser, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" Margin="10,22,10,21.2" TextWrapping="Wrap" VerticalAlignment="Center"/>
 
