@@ -17,17 +17,8 @@ namespace InterfaceSmartCity.ViewModel {
 
         public SearchViewModel(INavigationService navigationService)
         {
-
-            //On ajoute un paramètre pour la navigation dans le constructeur
             _navigationService = navigationService;
         }
-
-
-
-
-
-
-
 
         //Search
         private ICommand _searchCommand;

@@ -22,6 +22,7 @@ namespace InterfaceSmartCity.ViewModel {
             SimpleIoc.Default.Register<SignUpViewModel> ();
             SimpleIoc.Default.Register<WelcomeViewModel> ();
             SimpleIoc.Default.Register<MyAnnouncementsViewModel>();
+            SimpleIoc.Default.Register<MyParkingsViewModel>();
 
             NavigationService navigationPages = new NavigationService ();
             SimpleIoc.Default.Register<INavigationService> (() => navigationPages);
@@ -35,6 +36,7 @@ namespace InterfaceSmartCity.ViewModel {
             navigationPages.Configure ("SignUp", typeof (SignUp));
             navigationPages.Configure ("Welcome", typeof (ListParking));
             navigationPages.Configure("MyAnnouncements", typeof(MyAnnouncements));
+            navigationPages.Configure("MyParkings", typeof(MyParkings));
         }
 
         public LoginViewModel Login {
@@ -96,6 +98,14 @@ namespace InterfaceSmartCity.ViewModel {
             get
             {
                 return ServiceLocator.Current.GetInstance<MyAnnouncementsViewModel>();
+            }
+        }
+
+        public MyParkingsViewModel MyParkings
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<MyParkingsViewModel>();
             }
         }
     }

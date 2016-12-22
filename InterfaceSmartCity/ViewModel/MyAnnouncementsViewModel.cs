@@ -55,7 +55,7 @@ namespace InterfaceSmartCity.ViewModel
             Announcements = new ObservableCollection<Announcement>(await announcementDAO.getMyAnnouncements());
         }
 
-        //Profil
+        //Back
         private ICommand _goBackCommand;
         public ICommand GoBackCommand
         {
@@ -72,7 +72,24 @@ namespace InterfaceSmartCity.ViewModel
             _navigationService.NavigateTo("Welcome");
         }
 
-        //GoBack
+        //Add
+        private ICommand _addCommand;
+        public ICommand AddAnnouncementCommand
+        {
+            get
+            {
+                if (_addCommand == null)
+                    _addCommand = new RelayCommand(() => AddAnnoucement());
+                return _addCommand;
+            }
+        }
+
+        private void AddAnnoucement()
+        {
+            _navigationService.NavigateTo("CreateAnnouncement");
+        }
+
+        //Remove
         private ICommand _removeCommand;
         public ICommand RemoveAnnouncementCommand
         {
@@ -89,6 +106,18 @@ namespace InterfaceSmartCity.ViewModel
             AnnouncementDAO announcementDAO = new AnnouncementDAO();
             announcementDAO.removeAnnouncement(SelectedAnnouncement);
             loadAnnouncement();
+        }
+
+        //Refresh
+        private ICommand _refreshCommand;
+        public ICommand RefreshCommand
+        {
+            get
+            {
+                if (_refreshCommand == null)
+                    _refreshCommand = new RelayCommand(() => loadAnnouncement());
+                return _refreshCommand;
+            }
         }
 
     }

@@ -254,3 +254,8 @@ C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\MyAnno
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\MyAnnouncements.xaml
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\MyAnnouncements.xbf
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\bin\x86\Debug\View\MyAnnouncements.xbf
+C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\bin\x86\Debug\View\MyParkings.xbf
+C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\MyParkings.g.i.cs
+C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\MyParkings.g.cs
+C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\MyParkings.xaml
+C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\MyParkings.xbf

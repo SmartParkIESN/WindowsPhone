@@ -110,7 +110,7 @@ namespace InterfaceSmartCity.ViewModel {
 
         private void GoMyParkings()
         {
-            _navigationService.NavigateTo("SearchParking");
+            _navigationService.NavigateTo("MyParkings");
         }
 
         //Profil
@@ -150,6 +150,20 @@ namespace InterfaceSmartCity.ViewModel {
             userConnected.setUser(null);
             _navigationService.NavigateTo("Login");
         }
+
+        //Refresh
+        private ICommand _refreshCommand;
+        public ICommand RefreshCommand
+        {
+            get
+            {
+                if (_refreshCommand == null)
+                    _refreshCommand = new RelayCommand(() => loadAnnouncement());
+                return _refreshCommand;
+            }
+        }
+
+        
 
         private bool CanExecute () {
             return (SelectedAnnouncement != null);

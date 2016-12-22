@@ -19,8 +19,8 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="216"></ColumnDefinition>
-            <ColumnDefinition Width="216"></ColumnDefinition>
+            <ColumnDefinition Width="230"></ColumnDefinition>
+            <ColumnDefinition Width="230"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         
         <Image Source="/Assets/smartparklogo.png" Grid.ColumnSpan="2" HorizontalAlignment="Center" Width="150" Height="150"/>
@@ -28,7 +28,7 @@
         <TextBox x:Name="textBoxPseudo" Text="{Binding NameUser, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" Margin="10,22,10,21.2" TextWrapping="Wrap" VerticalAlignment="Center"/>
 
         <TextBlock Text="Password : " Grid.Row="2" Grid.Column="0" Margin="50,0,-10,0"  VerticalAlignment="Center"></TextBlock>
-        <TextBox x:Name="textBoxPassword" Text="{Binding PasswordUser, Mode=TwoWay}" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Center" Margin="10,21.8,10,21.4"/>
+        <PasswordBox Password="{Binding PasswordUser, Mode=TwoWay}" x:Name="textBoxPassword" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Margin="10,21.8,10,21.4"/>
 
         <Button x:Name="login" Command="{Binding LogInCommand}" Content="Login" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="181,33.6,181,9.4" Width="70"></Button>
 

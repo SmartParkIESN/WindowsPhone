@@ -12,6 +12,7 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <CommandBar>
+            <AppBarButton Icon="Sync" Label="Search" Command="{Binding RefreshCommand}"/>
             <AppBarButton Icon="Find" Label="Search" Command="{Binding GoSearchCommand}"/>
             <CommandBar.SecondaryCommands>
                 <AppBarButton Icon="PreviewLink" Label="My Announcements" Command="{Binding GoMyAnnouncementsCommand}"/>

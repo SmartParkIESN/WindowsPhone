@@ -1,5 +1,7 @@
-﻿using GalaSoft.MvvmLight.Command;
+﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Views;
+using InterfaceSmartCity.Exceptions;
 using InterfaceSmartCity.Model;
 using InterfaceSmartCity.Services;
 using System;
@@ -11,7 +13,8 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace InterfaceSmartCity.ViewModel {
-    class ProfileViewModel {
+    class ProfileViewModel : ViewModelBase, INotifyPropertyChanged
+    {
 
         private String _pseudo;
         private String _mail;
@@ -26,7 +29,7 @@ namespace InterfaceSmartCity.ViewModel {
             set
             {
                 _pseudo = value;
-                OnNotifyPropertyChanged("Pseudo");
+                RaisePropertyChanged("Pseudo");
             }
         }
 
@@ -36,7 +39,7 @@ namespace InterfaceSmartCity.ViewModel {
             set
             {
                 _mail = value;
-                OnNotifyPropertyChanged("Mail");
+                RaisePropertyChanged("Mail");
             }
         }
 
@@ -46,7 +49,7 @@ namespace InterfaceSmartCity.ViewModel {
             set
             {
                 _password = value;
-                OnNotifyPropertyChanged("Password");
+                RaisePropertyChanged("Password");
             }
         }
 
@@ -56,7 +59,7 @@ namespace InterfaceSmartCity.ViewModel {
             set
             {
                 _passwordConf = value;
-                OnNotifyPropertyChanged("PasswordConf");
+                RaisePropertyChanged("PasswordConf");
             }
         }
 
@@ -66,7 +69,7 @@ namespace InterfaceSmartCity.ViewModel {
             set
             {
                 _phoneNumber = value;
-                OnNotifyPropertyChanged("PhoneNumber");
+                RaisePropertyChanged("PhoneNumber");
             }
         }
 
@@ -76,21 +79,7 @@ namespace InterfaceSmartCity.ViewModel {
             set
             {
                 _infosEdit = value;
-                OnNotifyPropertyChanged("InfosEdit");
-            }
-        }
-
-
-        
-
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void OnNotifyPropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+                RaisePropertyChanged("InfosEdit");
             }
         }
 
@@ -106,7 +95,6 @@ namespace InterfaceSmartCity.ViewModel {
             Pseudo = userConnected.getUserConnected().Pseudo;
             Mail = userConnected.getUserConnected().Email;
             PhoneNumber = userConnected.getUserConnected().PhoneNumber;
-            InfosEdit = "";
 
             //On ajoute un paramètre pour la navigation dans le constructeur
             _navigationService = navigationService;
@@ -145,7 +133,6 @@ namespace InterfaceSmartCity.ViewModel {
         {
             UserConnected userConnected = new UserConnected();
             userConnected = userConnected.getINSTANCE();
-            Boolean result = false;
 
             User user = userConnected.getUserConnected();
 
@@ -154,18 +141,26 @@ namespace InterfaceSmartCity.ViewModel {
             user.Password = Password;
 
             UserDAO userDAO = new UserDAO();
+
             try
             {
-                result = await userDAO.ModifyUser(user);              
+                InfosEdit = await userDAO.ModifyUser(user, _passwordConf);              
             }
-            catch(Exception ex)
+            catch(EmailException ex)
             {
-                InfosEdit = ex.ToString();
+                InfosEdit = ex.Message;
             }
-
-            if(result)
+            catch (PasswordException ex)
             {
-                InfosEdit = "Edit success";
+                InfosEdit = ex.Message;
+            }
+            catch (PasswordVerifException ex)
+            {
+                InfosEdit = ex.Message;
+            }
+            catch (Exception ex)
+            {
+                InfosEdit = "Connection error";
             }
 
         }

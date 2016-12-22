@@ -1,4 +1,5 @@
-﻿using InterfaceSmartCity.Model;
+﻿using InterfaceSmartCity.Exceptions;
+using InterfaceSmartCity.Model;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -66,6 +67,32 @@ namespace InterfaceSmartCity.Services
             }
 
             return ListAnnouncements;
+        }
+
+        public async Task<string> PostAnnouncement(Announcement announcement)
+        {
+            if (announcement.Title == null || announcement.Title.Length < 4 || announcement.Title.Length > 30)
+            {
+                throw new TitleException();
+            }
+
+            if (announcement.Price < 2 || announcement.Price > 100)
+            {
+                throw new PriceException();
+            }
+
+            if (announcement.ParkingId == 0)
+            {
+                throw new ParkingException();
+            }
+
+            var client = new HttpClient();
+            string jsonAnnouncement = JsonConvert.SerializeObject(announcement);
+            var content = new StringContent(jsonAnnouncement, Encoding.UTF8, "application/json");
+            var result = await client.PostAsync("http://smartpark1.azurewebsites.net/api/Announcements", content);
+
+            return "Succesfull";
+
         }
 
         public async void removeAnnouncement(Announcement announcement)

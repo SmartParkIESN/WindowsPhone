@@ -17,6 +17,8 @@
             <RowDefinition Height="75"></RowDefinition>
             <RowDefinition Height="75"></RowDefinition>
             <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -25,13 +27,15 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Text="(Picture)" Grid.RowSpan="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-        <TextBox x:Name="textBoxName" Grid.Row="0" Grid.Column="1" TextWrapping="Wrap" Text="Name" VerticalAlignment="Center" Margin="87,22,13,21.2"/>
-        <TextBox x:Name="textBoxStreet" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="Street" VerticalAlignment="Center" Margin="87,21.8,13,21.4"/>
-        <TextBox x:Name="textBoxNumber" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Text="Number" VerticalAlignment="Center" Margin="87,21.6,13,21.6"/>
-        <ComboBox x:Name="comboBoxPlace" Grid.Row="3" VerticalAlignment="Center" Margin="87,22.4,0,20.8" Grid.Column="1" Width="116"/>
-        <TextBox x:Name="textBoxDescription" Grid.RowSpan="2" Grid.Row="4" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="Description" HorizontalAlignment="Center" VerticalAlignment="Center" Height="130" Margin="10,10.2,10,9.8" Width="412"/>
-        <Button x:Name="create" Content="Create" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox PlaceholderText="Name" x:Name="textBoxName" Grid.Row="0" Grid.Column="1" TextWrapping="Wrap" Text="{Binding Name, Mode=TwoWay}" VerticalAlignment="Center" Margin="87,22,13,21.2"/>
+        <TextBox PlaceholderText="Street" x:Name="textBoxStreet" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="{Binding Street, Mode=TwoWay}" VerticalAlignment="Center" Margin="87,21.8,13,21.4"/>
+        <TextBox PlaceholderText="Number" x:Name="textBoxNumber" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Text="{Binding Number, Mode=TwoWay}" VerticalAlignment="Center" Margin="87,21.6,13,21.6"/>
+        <ComboBox PlaceholderText="Place" x:Name="comboBoxPlace" ItemsSource="{Binding Places , Mode=TwoWay}" DisplayMemberPath="Name" SelectedValuePath="PlaceId" SelectedValue="{Binding SelectedPlaceId, Mode=TwoWay}"  Grid.Row="3" VerticalAlignment="Center" Margin="87,22.4,0,20.8" Grid.Column="1" Width="116"/>
+        <TextBox PlaceholderText="Description" x:Name="textBoxDescription" Grid.RowSpan="2" Grid.Row="4" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="{Binding Description, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="130" Margin="10,10.2,10,9.8" Width="412"/>
+        <Button x:Name="create" Command="{Binding CreateCommand}" Content="Create" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="back" Command="{Binding GoBackCommand}" Content="Back" Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Rectangle  Grid.RowSpan="4" Grid.Column="0" Fill="#FFF4F4F5" HorizontalAlignment="Left" Stroke="Black" Height="255"  Width="255" Margin="10,22,0,23.8" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="textBoxInfosCreateParking" Grid.Row="8" Width="200" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="{Binding InfosCreateParking, Mode=TwoWay}" VerticalAlignment="Center"/>
 
 
 

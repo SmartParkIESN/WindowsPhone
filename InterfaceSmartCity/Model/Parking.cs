@@ -29,12 +29,26 @@ namespace InterfaceSmartCity.Model {
             ParkingId = id;
             Name = name;
             Street = street;
+            Number = number;
             Picture = picture;
             Description = description;
             Longitude = longitude;
             Latitude = latitude;
             Place = place;
             User = user;
+            PlaceId = placeId;
+            UserId = userId;
+        }
+
+        public Parking(String name, String street, String number, String picture, String description, float longitude, float latitude, long placeId, long userId)
+        {
+            Name = name;
+            Street = street;
+            Number = number;
+            Picture = picture;
+            Description = description;
+            Longitude = longitude;
+            Latitude = latitude;
             PlaceId = placeId;
             UserId = userId;
         }

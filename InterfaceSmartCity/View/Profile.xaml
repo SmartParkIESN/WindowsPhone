@@ -32,10 +32,10 @@
         <TextBox x:Name="textBoxEMail" Text="{Binding Mail, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,21.6,87,21.6" Width="119"/>
 
         <TextBlock Text="Password : " Grid.Row="2" Grid.Column="0" Margin="80,27.8,40,27.4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100"/>
-        <TextBox x:Name="textBoxPassword" Text="{Binding Password, Mode=TwoWay}" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,21.6,87,21.6" Width="119"/>
+        <PasswordBox x:Name="textBoxPassword" Password="{Binding Password, Mode=TwoWay}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,21.6,87,21.6" Width="119"/>
 
         <TextBlock Text="Password conf : " Grid.Row="3" Grid.Column="0" Margin="80,27.8,40,27.4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100"/>
-        <TextBox x:Name="textBoxPasswordConf" Text="{Binding PasswordConf, Mode=TwoWay}" Grid.Row="3" Grid.Column="1" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,21.6,87,21.6" Width="119"/>
+        <PasswordBox x:Name="textBoxPasswordConf" Password="{Binding PasswordConf, Mode=TwoWay}" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,21.6,87,21.6" Width="119"/>
 
         <TextBlock Text="Phone number : " Grid.Row="4" Grid.Column="0" Margin="80,27.8,40,27.4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100"/>
         <TextBox x:Name="textBoxPhoneNumber" Text="{Binding PhoneNumber, Mode=TwoWay}" Grid.Row="4" Grid.Column="1" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,21.6,87,21.6" Width="119"/>

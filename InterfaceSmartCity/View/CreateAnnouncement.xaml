@@ -14,6 +14,9 @@
             <RowDefinition Height="75"></RowDefinition>
             <RowDefinition Height="75"></RowDefinition>
             <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
             <RowDefinition Height="75"></RowDefinition>
             <RowDefinition Height="75"></RowDefinition>
         </Grid.RowDefinitions>
@@ -23,15 +26,16 @@
             <ColumnDefinition Width="216"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <TextBox x:Name="textBoxTitle" Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" Text="Title" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,22,10,21.2" Width="196"/>
-        <ComboBox x:Name="comboBox1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Margin="10,22,10,21.2" Width="196"/>
-        <TextBox x:Name="textBoxDescription" Grid.RowSpan="2" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="Description" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,9.8,10,10.2" Width="412" Height="130" Grid.Row="1"/>
-        <TextBox x:Name="textBoxPrice" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap" Text="Price" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,21.8,142,21.2"/>
-        <TextBlock Text="From" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,27.6,171,27.6"></TextBlock>
-        <TextBlock Text="To" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,26.6,190,28.6"></TextBlock>
-        <ComboBox x:Name="comboBox2" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <ComboBox x:Name="comboBox3" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Button x:Name="send" Content="Send" Grid.Row="5" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox Text="{Binding Title, Mode=TwoWay}" PlaceholderText="Title" x:Name="textBoxTitle" Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,22,10,21.2" Width="196"/>
+        <ComboBox PlaceholderText="Choose parking" ItemsSource="{Binding Parkings , Mode=TwoWay}" DisplayMemberPath="Name" SelectedValuePath="ParkingId" SelectedValue="{Binding SelectedParkingId, Mode=TwoWay}" x:Name="comboBox1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Margin="10,22,10,21.2" Width="196"/>
+        <TextBox Text="{Binding Price, Mode=TwoWay}" PlaceholderText="Price/h" x:Name="textBoxPrice" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,21.8,142,21.2"/>
+        <TextBlock Text="From" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBlock>
+        <DatePicker x:Name="datePickerFrom" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Text="To" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBlock>
+        <DatePicker  x:Name="datePickerTo" Grid.Row="5" Grid.ColumnSpan="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="send" Command="{Binding CreateCommand}" Content="Create" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="back" Command="{Binding GoBackCommand}" Content="Back" Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="textBoxInfosCreateAnnouncement" Grid.Row="8" Width="200" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="{Binding InfosCreateAnnouncement, Mode=TwoWay}" VerticalAlignment="Center"/>
 
 
     </Grid>

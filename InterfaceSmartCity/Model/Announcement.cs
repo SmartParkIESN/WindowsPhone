@@ -27,5 +27,15 @@ namespace InterfaceSmartCity.Model {
             Parking = parking;
             ParkingId = parkingId;
         }
+
+        public Announcement(String title, int price, DateTime dateFrom, DateTime dateTo, Boolean rented, long parkingId)
+        {
+            Title = title;
+            Price = price;
+            DateFrom = dateFrom;
+            DateTo = dateTo;
+            Rented = rented;
+            ParkingId = parkingId;
+        }
     }
 }

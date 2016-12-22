@@ -1,6 +1,7 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Views;
+using InterfaceSmartCity.Exceptions;
 using InterfaceSmartCity.Model;
 using InterfaceSmartCity.Services;
 using System;
@@ -28,7 +29,7 @@ namespace InterfaceSmartCity.ViewModel {
             set
             {
                 _pseudo = value;
-                OnNotifyPropertyChanged("Pseudo");
+                RaisePropertyChanged("Pseudo");
             }
         }
 
@@ -38,7 +39,7 @@ namespace InterfaceSmartCity.ViewModel {
             set
             {
                 _mail = value;
-                OnNotifyPropertyChanged("Mail");
+                RaisePropertyChanged("Mail");
             }
         }
 
@@ -48,7 +49,7 @@ namespace InterfaceSmartCity.ViewModel {
             set
             {
                 _password = value;
-                OnNotifyPropertyChanged("Password");
+                RaisePropertyChanged("Password");
             }
         }
 
@@ -58,7 +59,7 @@ namespace InterfaceSmartCity.ViewModel {
             set
             {
                 _passwordConf = value;
-                OnNotifyPropertyChanged("PasswordConf");
+                RaisePropertyChanged("PasswordConf");
             }
         }
 
@@ -68,7 +69,7 @@ namespace InterfaceSmartCity.ViewModel {
             set
             {
                 _phoneNumber = value;
-                OnNotifyPropertyChanged("PhoneNumber");
+                RaisePropertyChanged("PhoneNumber");
             }
         }
 
@@ -78,25 +79,15 @@ namespace InterfaceSmartCity.ViewModel {
             set
             {
                 _infosSignUp = value;
-                OnNotifyPropertyChanged("InfosSignUp");
+                RaisePropertyChanged("InfosSignUp");
             }
         }    
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void OnNotifyPropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
 
         private INavigationService _navigationService = null;
 
         public SignUpViewModel(INavigationService navigationService)
         {
-            Password = "test";
             //On ajoute un paramètre pour la navigation dans le constructeur
             _navigationService = navigationService;
         }
@@ -113,18 +104,31 @@ namespace InterfaceSmartCity.ViewModel {
             }
         }
 
-        private async void  SignUp()
+        private async void SignUp()
         {
-            if(!_password.Equals(_passwordConf))
-            {
-                InfosSignUp = "Passwords doesn't match";
-            }
-            else
-            {
-                User user = new User(_pseudo, _mail, _password, _phoneNumber);
-                UserDAO usersDAO = new UserDAO();
-                InfosSignUp = await usersDAO.SignUp(user);
-            } 
+            
+              User user = new User(_pseudo, _mail, _password, _phoneNumber);
+              UserDAO usersDAO = new UserDAO();
+              try
+              {
+                InfosSignUp = await usersDAO.SignUp(user, _passwordConf);
+              }
+              catch (EmailException ex)
+              {
+                  InfosSignUp = ex.Message;
+              }
+              catch (PseudoException ex)
+              {
+                  InfosSignUp = ex.Message;
+              }
+              catch (PasswordException ex)
+              {
+                  InfosSignUp = ex.Message;
+              }
+              catch (PasswordVerifException ex)
+              {
+                  InfosSignUp = ex.Message;
+              }
         }
         //
 

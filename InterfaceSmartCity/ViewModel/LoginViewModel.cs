@@ -14,6 +14,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using System.Xml.Linq;
 using InterfaceSmartCity.Services;
+using InterfaceSmartCity.Exceptions;
 
 namespace InterfaceSmartCity.ViewModel {
     public class LoginViewModel : ViewModelBase, INotifyPropertyChanged {
@@ -27,7 +28,7 @@ namespace InterfaceSmartCity.ViewModel {
             set
             {
                 _nameUser = value;
-                OnNotifyPropertyChanged("NameUser");
+                RaisePropertyChanged("NameUser");
             }
         }
 
@@ -36,7 +37,7 @@ namespace InterfaceSmartCity.ViewModel {
             set
             {
                 _passwordUser = value;
-                OnNotifyPropertyChanged("PasswordUser");
+                RaisePropertyChanged("PasswordUser");
             }
         }
 
@@ -46,17 +47,7 @@ namespace InterfaceSmartCity.ViewModel {
             set
             {
                 _InfoConnection = value;
-                OnNotifyPropertyChanged("InfoConnection");
-            }
-        }
-
-        
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void OnNotifyPropertyChanged(string propertyName) {
-            if(PropertyChanged != null) {
-            PropertyChanged (this, new PropertyChangedEventArgs(propertyName));
+                RaisePropertyChanged("InfoConnection");
             }
         }
 
@@ -102,25 +93,29 @@ namespace InterfaceSmartCity.ViewModel {
         private async void LogIn()
         {
             UserDAO userDAO = new UserDAO();
-            Boolean result = false;
 
             try
             {
-               result = await userDAO.logIn(NameUser, PasswordUser);
+                InfoConnection = await userDAO.logIn(NameUser, PasswordUser);            
+               _navigationService.NavigateTo("Welcome");
+            }
+            catch (PseudoException ex)
+            {
+                InfoConnection = ex.Message;
+            }
+            catch (PasswordException ex)
+            {
+                InfoConnection = ex.Message;
+            }
+            catch (LoginException ex)
+            {
+                InfoConnection = ex.Message;
             }
             catch (Exception ex)
             {
-                InfoConnection = "Login error";
+                InfoConnection = "Connection error";
             }
-
-             if (result)
-             {
-                _navigationService.NavigateTo("Welcome");
-            }
-             else
-             {
-                InfoConnection = "Login error";
-            }
+            
         }
 
 

@@ -95,6 +95,18 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Exceptions\DescriptionException.cs" />
+    <Compile Include="Exceptions\EmailException.cs" />
+    <Compile Include="Exceptions\LoginException.cs" />
+    <Compile Include="Exceptions\NumberException.cs" />
+    <Compile Include="Exceptions\ParkingException.cs" />
+    <Compile Include="Exceptions\PasswordException.cs" />
+    <Compile Include="Exceptions\PasswordVerifException.cs" />
+    <Compile Include="Exceptions\PlaceException.cs" />
+    <Compile Include="Exceptions\PriceException.cs" />
+    <Compile Include="Exceptions\PseudoException.cs" />
+    <Compile Include="Exceptions\StreetException.cs" />
+    <Compile Include="Exceptions\TitleException.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -105,12 +117,15 @@
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AnnouncementDAO.cs" />
+    <Compile Include="Services\ParkingDAO.cs" />
+    <Compile Include="Services\PlaceDAO.cs" />
     <Compile Include="Services\UserConnected.cs" />
     <Compile Include="Services\UserDAO.cs" />
     <Compile Include="ViewModel\CreateAnnouncementViewModel.cs" />
     <Compile Include="ViewModel\CreateParkingViewModel.cs" />
     <Compile Include="ViewModel\DetailViewModel.cs" />
     <Compile Include="ViewModel\MyAnnouncementsViewModel.cs" />
+    <Compile Include="ViewModel\MyParkingsViewModel.cs" />
     <Compile Include="ViewModel\WelcomeViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MessageViewModel.cs" />
@@ -129,6 +144,9 @@
     </Compile>
     <Compile Include="View\MyAnnouncements.xaml.cs">
       <DependentUpon>MyAnnouncements.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MyParkings.xaml.cs">
+      <DependentUpon>MyParkings.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
@@ -189,6 +207,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\MyAnnouncements.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MyParkings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

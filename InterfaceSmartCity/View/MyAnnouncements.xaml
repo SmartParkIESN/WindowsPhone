@@ -11,9 +11,9 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <CommandBar>
             <AppBarButton Icon="Back" Label="Back" Command="{Binding GoBackCommand}"/>
+            <AppBarButton Icon="Sync" Label="Search" Command="{Binding RefreshCommand}"/>
             <AppBarButton Icon="Add" Label="Add" Command="{Binding AddAnnouncementCommand}"/>
             <AppBarButton Icon="Remove" Label="Remove" Command="{Binding RemoveAnnouncementCommand}"/>
-            <AppBarButton Icon="Edit" Label="Edit" Command="{Binding EditAnnouncementCommand}"/>
             <CommandBar.Content>
                 <TextBlock Text="My announcements" Margin="12,14"/>
             </CommandBar.Content>
