@@ -88,9 +88,12 @@ namespace InterfaceSmartCity.ViewModel
 
         private void Remove()
         {
-            ParkingDAO parkingDAO = new ParkingDAO();
-            parkingDAO.removeParking(SelectedParking);
-            loadParking();
+            if(SelectedParking != null)
+            {
+                ParkingDAO parkingDAO = new ParkingDAO();
+                parkingDAO.removeParking(SelectedParking);
+                loadParking();
+            }
         }
 
         //Add

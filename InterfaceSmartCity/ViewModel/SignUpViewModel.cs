@@ -129,6 +129,14 @@ namespace InterfaceSmartCity.ViewModel {
               {
                   InfosSignUp = ex.Message;
               }
+              catch(PseudoExistingException ex)
+              {
+                InfosSignUp = ex.Message;
+              }
+              catch(Exception ex)
+              {
+                InfosSignUp = "Error connection";
+              }
         }
         //
 

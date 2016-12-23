@@ -25,6 +25,8 @@
             <ColumnDefinition Width="216"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
+        <TextBlock FontWeight="Bold" FontSize="23" HorizontalAlignment="Center" Text="Profil" Margin="0,0,0,0" Grid.Row="0"  Grid.ColumnSpan="2" Grid.Column="0" />
+        
         <TextBlock Text="Pseudo : " Grid.Row="0" Grid.Column="0" Margin="80,40,34,15.2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100"/>
         <TextBlock Text="{Binding Pseudo, Mode=TwoWay}" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,40,121,15.2" Width="85"/>
 

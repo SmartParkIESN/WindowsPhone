@@ -16,7 +16,6 @@ namespace InterfaceSmartCity.ViewModel {
             SimpleIoc.Default.Register<CreateParkingViewModel> ();
             SimpleIoc.Default.Register<DetailViewModel> ();
             SimpleIoc.Default.Register<LoginViewModel> ();
-            SimpleIoc.Default.Register<MessageViewModel> ();
             SimpleIoc.Default.Register<ProfileViewModel> ();
             SimpleIoc.Default.Register<SearchViewModel> ();
             SimpleIoc.Default.Register<SignUpViewModel> ();
@@ -30,7 +29,6 @@ namespace InterfaceSmartCity.ViewModel {
             navigationPages.Configure ("CreateParking", typeof (CreateParking));
             navigationPages.Configure ("DetailParking", typeof (DetailParking));
             navigationPages.Configure ("Login", typeof (Login));
-            navigationPages.Configure ("Message", typeof (Message));
             navigationPages.Configure ("Profile", typeof (Profile));
             navigationPages.Configure ("SearchParking", typeof (SearchParking));
             navigationPages.Configure ("SignUp", typeof (SignUp));
@@ -41,54 +39,64 @@ namespace InterfaceSmartCity.ViewModel {
 
         public LoginViewModel Login {
             get {
+                SimpleIoc.Default.Unregister<LoginViewModel>();
+                SimpleIoc.Default.Register<LoginViewModel>();
                 return ServiceLocator.Current.GetInstance<LoginViewModel> ();
             }
         }
 
         public CreateAnnouncementViewModel CreateAnnouncement {
             get {
+                SimpleIoc.Default.Unregister<CreateAnnouncementViewModel>();
+                SimpleIoc.Default.Register<CreateAnnouncementViewModel>();
                 return ServiceLocator.Current.GetInstance<CreateAnnouncementViewModel> ();
             }
         }
 
         public CreateParkingViewModel CreateParking {
             get {
+                SimpleIoc.Default.Unregister<CreateParkingViewModel>();
+                SimpleIoc.Default.Register<CreateParkingViewModel>();
                 return ServiceLocator.Current.GetInstance<CreateParkingViewModel> ();
             }
         }
 
         public DetailViewModel DetailParking {
             get {
+                SimpleIoc.Default.Unregister<DetailViewModel>();
+                SimpleIoc.Default.Register<DetailViewModel>();
                 return ServiceLocator.Current.GetInstance<DetailViewModel> ();
-            }
-        }
-
-        public MessageViewModel Message {
-            get {
-                return ServiceLocator.Current.GetInstance<MessageViewModel> ();
             }
         }
 
         public ProfileViewModel Profile {
             get {
+                SimpleIoc.Default.Unregister<ProfileViewModel>();
+                SimpleIoc.Default.Register<ProfileViewModel>();
                 return ServiceLocator.Current.GetInstance<ProfileViewModel> ();
             }
         }
 
         public SearchViewModel SearchParking {
             get {
+                SimpleIoc.Default.Unregister<SearchViewModel>();
+                SimpleIoc.Default.Register<SearchViewModel>();
                 return ServiceLocator.Current.GetInstance<SearchViewModel> ();
             }
         }
 
         public SignUpViewModel SignUp {
             get {
+                SimpleIoc.Default.Unregister<SignUpViewModel>();
+                SimpleIoc.Default.Register<SignUpViewModel>();
                 return ServiceLocator.Current.GetInstance<SignUpViewModel> ();
             }
         }
 
         public WelcomeViewModel ListParking {
             get {
+                SimpleIoc.Default.Unregister<WelcomeViewModel>();
+                SimpleIoc.Default.Register<WelcomeViewModel>();
                 return ServiceLocator.Current.GetInstance<WelcomeViewModel> ();
             }
         }
@@ -97,6 +105,8 @@ namespace InterfaceSmartCity.ViewModel {
         {
             get
             {
+                SimpleIoc.Default.Unregister<MyAnnouncementsViewModel>();
+                SimpleIoc.Default.Register<MyAnnouncementsViewModel>();
                 return ServiceLocator.Current.GetInstance<MyAnnouncementsViewModel>();
             }
         }
@@ -105,6 +115,8 @@ namespace InterfaceSmartCity.ViewModel {
         {
             get
             {
+                SimpleIoc.Default.Unregister<MyParkingsViewModel>();
+                SimpleIoc.Default.Register<MyParkingsViewModel>();
                 return ServiceLocator.Current.GetInstance<MyParkingsViewModel>();
             }
         }

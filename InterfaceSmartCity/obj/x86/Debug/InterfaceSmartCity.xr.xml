@@ -23,6 +23,10 @@
     <RootPropertyPathName Name="Location" />
     <RootPropertyPathName Name="SelectedAnnouncement" />
     <RootPropertyPathName Name="Parking" />
+    <RootPropertyPathName Name="User" />
+    <RootPropertyPathName Name="PhoneNumber" />
+    <RootPropertyPathName Name="Email" />
+    <RootPropertyPathName Name="Place" />
     <RootPropertyPathName Name="MyAnnouncements" />
     <RootPropertyPathName Name="Announcements" />
     <RootPropertyPathName Name="RemoveAnnouncementCommand" />
@@ -44,16 +48,17 @@
     <RootPropertyPathName Name="LogInCommand" />
     <RootPropertyPathName Name="PasswordUser" />
     <RootPropertyPathName Name="NameUser" />
-    <RootPropertyPathName Name="Message" />
     <RootPropertyPathName Name="Profile" />
     <RootPropertyPathName Name="InfosEdit" />
     <RootPropertyPathName Name="EditCommand" />
-    <RootPropertyPathName Name="PhoneNumber" />
     <RootPropertyPathName Name="PasswordConf" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="Mail" />
     <RootPropertyPathName Name="Pseudo" />
     <RootPropertyPathName Name="SearchParking" />
+    <RootPropertyPathName Name="InfosSearch" />
+    <RootPropertyPathName Name="PriceMax" />
+    <RootPropertyPathName Name="PriceMin" />
     <RootPropertyPathName Name="SearchCommand" />
     <RootPropertyPathName Name="SignUp" />
     <RootPropertyPathName Name="InfosSignUp" />
@@ -77,10 +82,10 @@
       <RootProperty Name="Margin" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
-      <RootMethod Name="GetColumn" />
-      <RootMethod Name="SetColumn" />
       <RootMethod Name="GetColumnSpan" />
       <RootMethod Name="SetColumnSpan" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
       <RootMethod Name="GetRowSpan" />
       <RootMethod Name="SetRowSpan" />
     </RootType>
@@ -97,6 +102,17 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Text" />
@@ -119,28 +135,11 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="Text" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="FontWeight" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="RenderTransformOrigin" />
-      <RootProperty Name="Height" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Command" />
       <RootProperty Name="Content" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="InterfaceSmartCity.View.CreateAnnouncement" />
@@ -161,6 +160,7 @@
       <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Maps.MapControl">
+      <RootProperty Name="Margin" />
       <RootProperty Name="Center" />
       <RootProperty Name="ZoomLevel" />
       <RootProperty Name="MapServiceToken" />
@@ -196,7 +196,6 @@
       <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="InterfaceSmartCity.View.Login" />
-    <RootType FullName="InterfaceSmartCity.View.Message" />
     <RootType FullName="InterfaceSmartCity.View.Profile" />
     <RootType FullName="InterfaceSmartCity.View.SearchParking" />
     <RootType FullName="InterfaceSmartCity.View.SignUp" />

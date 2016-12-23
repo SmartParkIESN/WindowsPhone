@@ -30,11 +30,12 @@
         <TextBlock Text="Price" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,44.6,173,10.4" FontWeight="Bold"></TextBlock>
         <TextBlock Text="From" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="11,27.8,170,27.4"></TextBlock>
         <TextBlock Text="To" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="11,27.8,189,27.4"></TextBlock>
-        <Button Command="{Binding SearchCommand}" x:Name="search" Content="Search" Grid.Row="3" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-        <Button Command="{Binding GoBackCommand}" x:Name="back" Content="Back" Grid.Row="4" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-        <TextBox PlaceholderText="Min" x:Name="comboBoxPriceFrom" Text="{Binding PriceMin, Mode=TwoWay}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox PlaceholderText="Max" x:Name="comboBoxPriceTo" Text="{Binding PriceMax, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock x:Name="textBoxInfosSearch" Grid.Row="5" Width="200" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="{Binding InfosSearch, Mode=TwoWay}" VerticalAlignment="Center"/>
+        <Button x:ConnectionId='1' Command="{Binding SearchCommand}" x:Name="search" Content="Search" Grid.Row="3" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+        <Button x:ConnectionId='2' Command="{Binding GoBackCommand}" x:Name="back" Content="Back" Grid.Row="4" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+        <TextBox x:ConnectionId='3' PlaceholderText="Min" x:Name="comboBoxPriceFrom" Text="{Binding PriceMin, Mode=TwoWay}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:ConnectionId='4' PlaceholderText="Max" x:Name="comboBoxPriceTo" Text="{Binding PriceMax, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:ConnectionId='5' x:Name="textBoxInfosSearch" Grid.Row="5" Width="200" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="{Binding InfosSearch, Mode=TwoWay}" VerticalAlignment="Center"/>
 
     </Grid>
 </Page>
+

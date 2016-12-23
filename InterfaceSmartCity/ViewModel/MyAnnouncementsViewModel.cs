@@ -103,9 +103,12 @@ namespace InterfaceSmartCity.ViewModel
 
         private void Remove()
         {
-            AnnouncementDAO announcementDAO = new AnnouncementDAO();
-            announcementDAO.removeAnnouncement(SelectedAnnouncement);
-            loadAnnouncement();
+            if(SelectedAnnouncement != null)
+            {
+                AnnouncementDAO announcementDAO = new AnnouncementDAO();
+                announcementDAO.removeAnnouncement(SelectedAnnouncement);
+                loadAnnouncement();
+            }         
         }
 
         //Refresh

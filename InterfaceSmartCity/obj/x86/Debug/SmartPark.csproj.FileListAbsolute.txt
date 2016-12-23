@@ -3,7 +3,6 @@ C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\bin\x86\Debug\MainPage.xb
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\bin\x86\Debug\View\CreateAnnouncement.xbf
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\bin\x86\Debug\View\CreateParking.xbf
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\bin\x86\Debug\View\Login.xbf
-C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\bin\x86\Debug\View\Message.xbf
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\bin\x86\Debug\View\Profile.xbf
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\bin\x86\Debug\View\SignUp.xbf
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\bin\x86\Debug\InterfaceSmartCity.xr.xml
@@ -136,8 +135,6 @@ C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\Create
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\CreateParking.g.cs
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\Login.g.i.cs
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\Login.g.cs
-C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\Message.g.i.cs
-C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\Message.g.cs
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\Profile.g.i.cs
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\Profile.g.cs
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\SignUp.g.i.cs
@@ -147,7 +144,6 @@ C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\App.xaml
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\MainPage.xaml
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\CreateAnnouncement.xaml
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\CreateParking.xaml
-C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\Message.xaml
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\Profile.xaml
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\SignUp.xaml
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\Login.xaml
@@ -155,7 +151,6 @@ C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\App.xbf
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\MainPage.xbf
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\CreateAnnouncement.xbf
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\CreateParking.xbf
-C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\Message.xbf
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\Profile.xbf
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\SignUp.xbf
 C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\obj\x86\Debug\View\Login.xbf

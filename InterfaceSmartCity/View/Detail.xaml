@@ -11,21 +11,34 @@
 
     <Grid Margin="0,50,0,0" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="150"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                 <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
                 <RowDefinition Height="500"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="700"/>
                 <ColumnDefinition Width="100"/>
             </Grid.ColumnDefinitions>
 
 
         <TextBlock Margin="10,0,0,0" FontWeight="Bold" FontSize="20" x:Name="textBlockTitle" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding SelectedAnnouncement.Title}" VerticalAlignment="Top"/>
-        <Image Margin="10,0,0,0" Width="150" Height="150" Source="/Assets/place.jpg" Grid.Row="1" Grid.Column="0"></Image>
-        <TextBlock Margin="15,20,0,0" x:Name="textBlockDescription" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="{Binding SelectedAnnouncement.Parking.Description}" VerticalAlignment="Top"/>
+        <Image Margin="10,0,0,0" Width="200" Height="200" Source="/Assets/place.jpg" Grid.Row="1" Grid.RowSpan="6" Grid.Column="0"></Image>
+        <TextBlock Margin="15,0,0,0" FontSize="18" FontWeight="Bold" x:Name="textBlockInfos" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="Infos" VerticalAlignment="Top"/>
+        <TextBlock Margin="15,0,0,0" x:Name="textBlockDescription" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Text="{Binding SelectedAnnouncement.Parking.Description}" VerticalAlignment="Top"/>
+        <TextBlock Margin="15,0,0,0" x:Name="textBlockPlace" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1" TextWrapping="Wrap" Text="{Binding SelectedAnnouncement.Parking.Place.Name}" VerticalAlignment="Top"/>
+        <TextBlock Margin="15,0,0,0" x:Name="textBlockNumber" HorizontalAlignment="Left" Grid.Row="4" Grid.Column="1" TextWrapping="Wrap" Text="{Binding SelectedAnnouncement.Parking.Number}" VerticalAlignment="Top"/>
+        <TextBlock Margin="40,0,0,0" x:Name="textBlockAdresse" HorizontalAlignment="Left" Grid.Row="4" Grid.Column="1" TextWrapping="Wrap" Text="{Binding SelectedAnnouncement.Parking.Street}" VerticalAlignment="Top"/>
+        <TextBlock Margin="15,0,0,0" FontSize="18" FontWeight="Bold" x:Name="textBlockContact" HorizontalAlignment="Left" Grid.Row="5" Grid.Column="1" TextWrapping="Wrap" Text="Contact" VerticalAlignment="Top"/>
+        <TextBlock Margin="15,0,0,0" x:Name="textBlockContactMail" HorizontalAlignment="Left" Grid.Row="6" Grid.Column="1" TextWrapping="Wrap" Text="{Binding SelectedAnnouncement.Parking.User.Email}" VerticalAlignment="Top"/>
+        <TextBlock Margin="15,0,0,0" x:Name="textBlockContactTel" HorizontalAlignment="Left" Grid.Row="7" Grid.Column="1" TextWrapping="Wrap" Text="{Binding SelectedAnnouncement.Parking.User.PhoneNumber}" VerticalAlignment="Top"/>
         <Button Grid.Row="0" Grid.Column="1" Command="{Binding GoBackCommand}" x:Name="back" Content="Back" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-        <Maps:MapControl Center="{Binding Location}" ZoomLevel="12" Grid.Row="2" Grid.ColumnSpan="2" x:Name="MapParking" MapServiceToken="BRkXMXsxoqCGdLJNNzin~iPM2tnQ_nvblJll00shoaQ~AnP9IwHhg-0OzO1skrGORQhvk2B4uHrKhCh1WgFK3pT6gNUkdmlWxKBbJfD8mwir"/>
+        <Maps:MapControl Margin="15,0,0,0" Center="{Binding Location}" ZoomLevel="6" Grid.Row="8" Grid.ColumnSpan="2" x:Name="MapParking" MapServiceToken="BRkXMXsxoqCGdLJNNzin~iPM2tnQ_nvblJll00shoaQ~AnP9IwHhg-0OzO1skrGORQhvk2B4uHrKhCh1WgFK3pT6gNUkdmlWxKBbJfD8mwir"/>
     </Grid>
 </Page>

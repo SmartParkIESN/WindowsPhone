@@ -42,7 +42,7 @@
 
                         <TextBlock FontWeight="Bold" Text="{Binding Title}" Grid.Row="0"  Grid.ColumnSpan="2" Grid.Column="0" />
                         <Image Width="80" Height="80" Source="/Assets/place.jpg" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0"></Image>
-                        <TextBlock FontSize="10" Text="{Binding Parking.Description}" Grid.Row="1" Grid.Column="1" ></TextBlock>
+                        <TextBlock FontSize="12" Text="{Binding Parking.Description}" Grid.Row="1" Grid.Column="1" ></TextBlock>
                         <TextBlock Text="{Binding Price}" Grid.Row="1" Grid.Column="2" />
                     </Grid>
                 </DataTemplate>

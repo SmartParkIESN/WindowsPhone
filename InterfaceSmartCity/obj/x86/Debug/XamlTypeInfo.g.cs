@@ -132,7 +132,7 @@ namespace InterfaceSmartCity.SmartPark_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[29];
+            _typeNameTable = new string[27];
             _typeNameTable[0] = "InterfaceSmartCity.ViewModel.ViewModelLocator";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "InterfaceSmartCity.ViewModel.LoginViewModel";
@@ -141,29 +141,27 @@ namespace InterfaceSmartCity.SmartPark_XamlTypeInfo
             _typeNameTable[5] = "InterfaceSmartCity.ViewModel.CreateAnnouncementViewModel";
             _typeNameTable[6] = "InterfaceSmartCity.ViewModel.CreateParkingViewModel";
             _typeNameTable[7] = "InterfaceSmartCity.ViewModel.DetailViewModel";
-            _typeNameTable[8] = "InterfaceSmartCity.ViewModel.MessageViewModel";
-            _typeNameTable[9] = "InterfaceSmartCity.ViewModel.ProfileViewModel";
-            _typeNameTable[10] = "InterfaceSmartCity.ViewModel.SearchViewModel";
-            _typeNameTable[11] = "InterfaceSmartCity.ViewModel.SignUpViewModel";
-            _typeNameTable[12] = "InterfaceSmartCity.ViewModel.WelcomeViewModel";
-            _typeNameTable[13] = "InterfaceSmartCity.ViewModel.MyAnnouncementsViewModel";
-            _typeNameTable[14] = "InterfaceSmartCity.ViewModel.MyParkingsViewModel";
-            _typeNameTable[15] = "InterfaceSmartCity.MainPage";
-            _typeNameTable[16] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[17] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[18] = "InterfaceSmartCity.View.CreateAnnouncement";
-            _typeNameTable[19] = "InterfaceSmartCity.View.CreateParking";
-            _typeNameTable[20] = "InterfaceSmartCity.View.DetailParking";
-            _typeNameTable[21] = "InterfaceSmartCity.View.MyAnnouncements";
-            _typeNameTable[22] = "InterfaceSmartCity.View.MyParkings";
-            _typeNameTable[23] = "InterfaceSmartCity.View.ListParking";
-            _typeNameTable[24] = "InterfaceSmartCity.View.Login";
-            _typeNameTable[25] = "InterfaceSmartCity.View.Message";
-            _typeNameTable[26] = "InterfaceSmartCity.View.Profile";
-            _typeNameTable[27] = "InterfaceSmartCity.View.SearchParking";
-            _typeNameTable[28] = "InterfaceSmartCity.View.SignUp";
+            _typeNameTable[8] = "InterfaceSmartCity.ViewModel.ProfileViewModel";
+            _typeNameTable[9] = "InterfaceSmartCity.ViewModel.SearchViewModel";
+            _typeNameTable[10] = "InterfaceSmartCity.ViewModel.SignUpViewModel";
+            _typeNameTable[11] = "InterfaceSmartCity.ViewModel.WelcomeViewModel";
+            _typeNameTable[12] = "InterfaceSmartCity.ViewModel.MyAnnouncementsViewModel";
+            _typeNameTable[13] = "InterfaceSmartCity.ViewModel.MyParkingsViewModel";
+            _typeNameTable[14] = "InterfaceSmartCity.MainPage";
+            _typeNameTable[15] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[16] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[17] = "InterfaceSmartCity.View.CreateAnnouncement";
+            _typeNameTable[18] = "InterfaceSmartCity.View.CreateParking";
+            _typeNameTable[19] = "InterfaceSmartCity.View.DetailParking";
+            _typeNameTable[20] = "InterfaceSmartCity.View.MyAnnouncements";
+            _typeNameTable[21] = "InterfaceSmartCity.View.MyParkings";
+            _typeNameTable[22] = "InterfaceSmartCity.View.ListParking";
+            _typeNameTable[23] = "InterfaceSmartCity.View.Login";
+            _typeNameTable[24] = "InterfaceSmartCity.View.Profile";
+            _typeNameTable[25] = "InterfaceSmartCity.View.SearchParking";
+            _typeNameTable[26] = "InterfaceSmartCity.View.SignUp";
 
-            _typeTable = new global::System.Type[29];
+            _typeTable = new global::System.Type[27];
             _typeTable[0] = typeof(global::InterfaceSmartCity.ViewModel.ViewModelLocator);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::InterfaceSmartCity.ViewModel.LoginViewModel);
@@ -172,27 +170,25 @@ namespace InterfaceSmartCity.SmartPark_XamlTypeInfo
             _typeTable[5] = typeof(global::InterfaceSmartCity.ViewModel.CreateAnnouncementViewModel);
             _typeTable[6] = typeof(global::InterfaceSmartCity.ViewModel.CreateParkingViewModel);
             _typeTable[7] = typeof(global::InterfaceSmartCity.ViewModel.DetailViewModel);
-            _typeTable[8] = typeof(global::InterfaceSmartCity.ViewModel.MessageViewModel);
-            _typeTable[9] = typeof(global::InterfaceSmartCity.ViewModel.ProfileViewModel);
-            _typeTable[10] = typeof(global::InterfaceSmartCity.ViewModel.SearchViewModel);
-            _typeTable[11] = typeof(global::InterfaceSmartCity.ViewModel.SignUpViewModel);
-            _typeTable[12] = typeof(global::InterfaceSmartCity.ViewModel.WelcomeViewModel);
-            _typeTable[13] = typeof(global::InterfaceSmartCity.ViewModel.MyAnnouncementsViewModel);
-            _typeTable[14] = typeof(global::InterfaceSmartCity.ViewModel.MyParkingsViewModel);
-            _typeTable[15] = typeof(global::InterfaceSmartCity.MainPage);
-            _typeTable[16] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[17] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[18] = typeof(global::InterfaceSmartCity.View.CreateAnnouncement);
-            _typeTable[19] = typeof(global::InterfaceSmartCity.View.CreateParking);
-            _typeTable[20] = typeof(global::InterfaceSmartCity.View.DetailParking);
-            _typeTable[21] = typeof(global::InterfaceSmartCity.View.MyAnnouncements);
-            _typeTable[22] = typeof(global::InterfaceSmartCity.View.MyParkings);
-            _typeTable[23] = typeof(global::InterfaceSmartCity.View.ListParking);
-            _typeTable[24] = typeof(global::InterfaceSmartCity.View.Login);
-            _typeTable[25] = typeof(global::InterfaceSmartCity.View.Message);
-            _typeTable[26] = typeof(global::InterfaceSmartCity.View.Profile);
-            _typeTable[27] = typeof(global::InterfaceSmartCity.View.SearchParking);
-            _typeTable[28] = typeof(global::InterfaceSmartCity.View.SignUp);
+            _typeTable[8] = typeof(global::InterfaceSmartCity.ViewModel.ProfileViewModel);
+            _typeTable[9] = typeof(global::InterfaceSmartCity.ViewModel.SearchViewModel);
+            _typeTable[10] = typeof(global::InterfaceSmartCity.ViewModel.SignUpViewModel);
+            _typeTable[11] = typeof(global::InterfaceSmartCity.ViewModel.WelcomeViewModel);
+            _typeTable[12] = typeof(global::InterfaceSmartCity.ViewModel.MyAnnouncementsViewModel);
+            _typeTable[13] = typeof(global::InterfaceSmartCity.ViewModel.MyParkingsViewModel);
+            _typeTable[14] = typeof(global::InterfaceSmartCity.MainPage);
+            _typeTable[15] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[16] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[17] = typeof(global::InterfaceSmartCity.View.CreateAnnouncement);
+            _typeTable[18] = typeof(global::InterfaceSmartCity.View.CreateParking);
+            _typeTable[19] = typeof(global::InterfaceSmartCity.View.DetailParking);
+            _typeTable[20] = typeof(global::InterfaceSmartCity.View.MyAnnouncements);
+            _typeTable[21] = typeof(global::InterfaceSmartCity.View.MyParkings);
+            _typeTable[22] = typeof(global::InterfaceSmartCity.View.ListParking);
+            _typeTable[23] = typeof(global::InterfaceSmartCity.View.Login);
+            _typeTable[24] = typeof(global::InterfaceSmartCity.View.Profile);
+            _typeTable[25] = typeof(global::InterfaceSmartCity.View.SearchParking);
+            _typeTable[26] = typeof(global::InterfaceSmartCity.View.SignUp);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -229,19 +225,17 @@ namespace InterfaceSmartCity.SmartPark_XamlTypeInfo
 
         private object Activate_0_ViewModelLocator() { return new global::InterfaceSmartCity.ViewModel.ViewModelLocator(); }
         private object Activate_4_ObservableObject() { return new global::GalaSoft.MvvmLight.ObservableObject(); }
-        private object Activate_8_MessageViewModel() { return new global::InterfaceSmartCity.ViewModel.MessageViewModel(); }
-        private object Activate_15_MainPage() { return new global::InterfaceSmartCity.MainPage(); }
-        private object Activate_18_CreateAnnouncement() { return new global::InterfaceSmartCity.View.CreateAnnouncement(); }
-        private object Activate_19_CreateParking() { return new global::InterfaceSmartCity.View.CreateParking(); }
-        private object Activate_20_DetailParking() { return new global::InterfaceSmartCity.View.DetailParking(); }
-        private object Activate_21_MyAnnouncements() { return new global::InterfaceSmartCity.View.MyAnnouncements(); }
-        private object Activate_22_MyParkings() { return new global::InterfaceSmartCity.View.MyParkings(); }
-        private object Activate_23_ListParking() { return new global::InterfaceSmartCity.View.ListParking(); }
-        private object Activate_24_Login() { return new global::InterfaceSmartCity.View.Login(); }
-        private object Activate_25_Message() { return new global::InterfaceSmartCity.View.Message(); }
-        private object Activate_26_Profile() { return new global::InterfaceSmartCity.View.Profile(); }
-        private object Activate_27_SearchParking() { return new global::InterfaceSmartCity.View.SearchParking(); }
-        private object Activate_28_SignUp() { return new global::InterfaceSmartCity.View.SignUp(); }
+        private object Activate_14_MainPage() { return new global::InterfaceSmartCity.MainPage(); }
+        private object Activate_17_CreateAnnouncement() { return new global::InterfaceSmartCity.View.CreateAnnouncement(); }
+        private object Activate_18_CreateParking() { return new global::InterfaceSmartCity.View.CreateParking(); }
+        private object Activate_19_DetailParking() { return new global::InterfaceSmartCity.View.DetailParking(); }
+        private object Activate_20_MyAnnouncements() { return new global::InterfaceSmartCity.View.MyAnnouncements(); }
+        private object Activate_21_MyParkings() { return new global::InterfaceSmartCity.View.MyParkings(); }
+        private object Activate_22_ListParking() { return new global::InterfaceSmartCity.View.ListParking(); }
+        private object Activate_23_Login() { return new global::InterfaceSmartCity.View.Login(); }
+        private object Activate_24_Profile() { return new global::InterfaceSmartCity.View.Profile(); }
+        private object Activate_25_SearchParking() { return new global::InterfaceSmartCity.View.SearchParking(); }
+        private object Activate_26_SignUp() { return new global::InterfaceSmartCity.View.SignUp(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -260,7 +254,6 @@ namespace InterfaceSmartCity.SmartPark_XamlTypeInfo
                 userType.AddMemberName("CreateAnnouncement");
                 userType.AddMemberName("CreateParking");
                 userType.AddMemberName("DetailParking");
-                userType.AddMemberName("Message");
                 userType.AddMemberName("Profile");
                 userType.AddMemberName("SearchParking");
                 userType.AddMemberName("SignUp");
@@ -314,143 +307,129 @@ namespace InterfaceSmartCity.SmartPark_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 8:   //  InterfaceSmartCity.ViewModel.MessageViewModel
-                userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 9:   //  InterfaceSmartCity.ViewModel.ProfileViewModel
+            case 8:   //  InterfaceSmartCity.ViewModel.ProfileViewModel
                 userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  InterfaceSmartCity.ViewModel.SearchViewModel
-                userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 11:   //  InterfaceSmartCity.ViewModel.SignUpViewModel
+            case 9:   //  InterfaceSmartCity.ViewModel.SearchViewModel
                 userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  InterfaceSmartCity.ViewModel.WelcomeViewModel
+            case 10:   //  InterfaceSmartCity.ViewModel.SignUpViewModel
                 userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 13:   //  InterfaceSmartCity.ViewModel.MyAnnouncementsViewModel
+            case 11:   //  InterfaceSmartCity.ViewModel.WelcomeViewModel
                 userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 14:   //  InterfaceSmartCity.ViewModel.MyParkingsViewModel
+            case 12:   //  InterfaceSmartCity.ViewModel.MyAnnouncementsViewModel
                 userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 15:   //  InterfaceSmartCity.MainPage
+            case 13:   //  InterfaceSmartCity.ViewModel.MyParkingsViewModel
+                userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 14:   //  InterfaceSmartCity.MainPage
                 userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_15_MainPage;
+                userType.Activator = Activate_14_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 16:   //  Windows.UI.Xaml.Controls.Page
+            case 15:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 17:   //  Windows.UI.Xaml.Controls.UserControl
+            case 16:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 18:   //  InterfaceSmartCity.View.CreateAnnouncement
+            case 17:   //  InterfaceSmartCity.View.CreateAnnouncement
                 userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_18_CreateAnnouncement;
+                userType.Activator = Activate_17_CreateAnnouncement;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 19:   //  InterfaceSmartCity.View.CreateParking
+            case 18:   //  InterfaceSmartCity.View.CreateParking
                 userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_19_CreateParking;
+                userType.Activator = Activate_18_CreateParking;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 20:   //  InterfaceSmartCity.View.DetailParking
+            case 19:   //  InterfaceSmartCity.View.DetailParking
                 userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_20_DetailParking;
+                userType.Activator = Activate_19_DetailParking;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 21:   //  InterfaceSmartCity.View.MyAnnouncements
+            case 20:   //  InterfaceSmartCity.View.MyAnnouncements
                 userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_21_MyAnnouncements;
+                userType.Activator = Activate_20_MyAnnouncements;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 22:   //  InterfaceSmartCity.View.MyParkings
+            case 21:   //  InterfaceSmartCity.View.MyParkings
                 userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_22_MyParkings;
+                userType.Activator = Activate_21_MyParkings;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 23:   //  InterfaceSmartCity.View.ListParking
+            case 22:   //  InterfaceSmartCity.View.ListParking
                 userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_23_ListParking;
+                userType.Activator = Activate_22_ListParking;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 24:   //  InterfaceSmartCity.View.Login
+            case 23:   //  InterfaceSmartCity.View.Login
                 userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_24_Login;
+                userType.Activator = Activate_23_Login;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 25:   //  InterfaceSmartCity.View.Message
+            case 24:   //  InterfaceSmartCity.View.Profile
                 userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_25_Message;
+                userType.Activator = Activate_24_Profile;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 26:   //  InterfaceSmartCity.View.Profile
+            case 25:   //  InterfaceSmartCity.View.SearchParking
                 userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_26_Profile;
+                userType.Activator = Activate_25_SearchParking;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 27:   //  InterfaceSmartCity.View.SearchParking
+            case 26:   //  InterfaceSmartCity.View.SignUp
                 userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_27_SearchParking;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 28:   //  InterfaceSmartCity.View.SignUp
-                userType = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_28_SignUp;
+                userType.Activator = Activate_26_SignUp;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -479,37 +458,32 @@ namespace InterfaceSmartCity.SmartPark_XamlTypeInfo
             var that = (global::InterfaceSmartCity.ViewModel.ViewModelLocator)instance;
             return that.DetailParking;
         }
-        private object get_4_ViewModelLocator_Message(object instance)
-        {
-            var that = (global::InterfaceSmartCity.ViewModel.ViewModelLocator)instance;
-            return that.Message;
-        }
-        private object get_5_ViewModelLocator_Profile(object instance)
+        private object get_4_ViewModelLocator_Profile(object instance)
         {
             var that = (global::InterfaceSmartCity.ViewModel.ViewModelLocator)instance;
             return that.Profile;
         }
-        private object get_6_ViewModelLocator_SearchParking(object instance)
+        private object get_5_ViewModelLocator_SearchParking(object instance)
         {
             var that = (global::InterfaceSmartCity.ViewModel.ViewModelLocator)instance;
             return that.SearchParking;
         }
-        private object get_7_ViewModelLocator_SignUp(object instance)
+        private object get_6_ViewModelLocator_SignUp(object instance)
         {
             var that = (global::InterfaceSmartCity.ViewModel.ViewModelLocator)instance;
             return that.SignUp;
         }
-        private object get_8_ViewModelLocator_ListParking(object instance)
+        private object get_7_ViewModelLocator_ListParking(object instance)
         {
             var that = (global::InterfaceSmartCity.ViewModel.ViewModelLocator)instance;
             return that.ListParking;
         }
-        private object get_9_ViewModelLocator_MyAnnouncements(object instance)
+        private object get_8_ViewModelLocator_MyAnnouncements(object instance)
         {
             var that = (global::InterfaceSmartCity.ViewModel.ViewModelLocator)instance;
             return that.MyAnnouncements;
         }
-        private object get_10_ViewModelLocator_MyParkings(object instance)
+        private object get_9_ViewModelLocator_MyParkings(object instance)
         {
             var that = (global::InterfaceSmartCity.ViewModel.ViewModelLocator)instance;
             return that.MyParkings;
@@ -546,46 +520,40 @@ namespace InterfaceSmartCity.SmartPark_XamlTypeInfo
                 xamlMember.Getter = get_3_ViewModelLocator_DetailParking;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "InterfaceSmartCity.ViewModel.ViewModelLocator.Message":
-                userType = (global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InterfaceSmartCity.ViewModel.ViewModelLocator");
-                xamlMember = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlMember(this, "Message", "InterfaceSmartCity.ViewModel.MessageViewModel");
-                xamlMember.Getter = get_4_ViewModelLocator_Message;
-                xamlMember.SetIsReadOnly();
-                break;
             case "InterfaceSmartCity.ViewModel.ViewModelLocator.Profile":
                 userType = (global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InterfaceSmartCity.ViewModel.ViewModelLocator");
                 xamlMember = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlMember(this, "Profile", "InterfaceSmartCity.ViewModel.ProfileViewModel");
-                xamlMember.Getter = get_5_ViewModelLocator_Profile;
+                xamlMember.Getter = get_4_ViewModelLocator_Profile;
                 xamlMember.SetIsReadOnly();
                 break;
             case "InterfaceSmartCity.ViewModel.ViewModelLocator.SearchParking":
                 userType = (global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InterfaceSmartCity.ViewModel.ViewModelLocator");
                 xamlMember = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlMember(this, "SearchParking", "InterfaceSmartCity.ViewModel.SearchViewModel");
-                xamlMember.Getter = get_6_ViewModelLocator_SearchParking;
+                xamlMember.Getter = get_5_ViewModelLocator_SearchParking;
                 xamlMember.SetIsReadOnly();
                 break;
             case "InterfaceSmartCity.ViewModel.ViewModelLocator.SignUp":
                 userType = (global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InterfaceSmartCity.ViewModel.ViewModelLocator");
                 xamlMember = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlMember(this, "SignUp", "InterfaceSmartCity.ViewModel.SignUpViewModel");
-                xamlMember.Getter = get_7_ViewModelLocator_SignUp;
+                xamlMember.Getter = get_6_ViewModelLocator_SignUp;
                 xamlMember.SetIsReadOnly();
                 break;
             case "InterfaceSmartCity.ViewModel.ViewModelLocator.ListParking":
                 userType = (global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InterfaceSmartCity.ViewModel.ViewModelLocator");
                 xamlMember = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlMember(this, "ListParking", "InterfaceSmartCity.ViewModel.WelcomeViewModel");
-                xamlMember.Getter = get_8_ViewModelLocator_ListParking;
+                xamlMember.Getter = get_7_ViewModelLocator_ListParking;
                 xamlMember.SetIsReadOnly();
                 break;
             case "InterfaceSmartCity.ViewModel.ViewModelLocator.MyAnnouncements":
                 userType = (global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InterfaceSmartCity.ViewModel.ViewModelLocator");
                 xamlMember = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlMember(this, "MyAnnouncements", "InterfaceSmartCity.ViewModel.MyAnnouncementsViewModel");
-                xamlMember.Getter = get_9_ViewModelLocator_MyAnnouncements;
+                xamlMember.Getter = get_8_ViewModelLocator_MyAnnouncements;
                 xamlMember.SetIsReadOnly();
                 break;
             case "InterfaceSmartCity.ViewModel.ViewModelLocator.MyParkings":
                 userType = (global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InterfaceSmartCity.ViewModel.ViewModelLocator");
                 xamlMember = new global::InterfaceSmartCity.SmartPark_XamlTypeInfo.XamlMember(this, "MyParkings", "InterfaceSmartCity.ViewModel.MyParkingsViewModel");
-                xamlMember.Getter = get_10_ViewModelLocator_MyParkings;
+                xamlMember.Getter = get_9_ViewModelLocator_MyParkings;
                 xamlMember.SetIsReadOnly();
                 break;
             }

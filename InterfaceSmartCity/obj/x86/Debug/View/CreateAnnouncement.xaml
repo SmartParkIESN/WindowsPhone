@@ -24,14 +24,15 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock FontWeight="Bold" FontSize="23" HorizontalAlignment="Center" Text="Create announcement" Margin="0,20,0,0" Grid.Row="0"  Grid.ColumnSpan="2" Grid.Column="0" />
-        <TextBox Text="{Binding Title, Mode=TwoWay}" PlaceholderText="Title" x:Name="textBoxTitle" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,22,10,21.2" Width="196"/>
-        <ComboBox PlaceholderText="Choose parking" ItemsSource="{Binding Parkings , Mode=TwoWay}" DisplayMemberPath="Name" SelectedValuePath="ParkingId" SelectedValue="{Binding SelectedParkingId, Mode=TwoWay}" x:Name="comboBox1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Margin="10,22,10,21.2" Width="196"/>
+        <TextBox x:ConnectionId='1' Text="{Binding Title, Mode=TwoWay}" PlaceholderText="Title" x:Name="textBoxTitle" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,22,10,21.2" Width="196"/>
+        <ComboBox x:ConnectionId='2' PlaceholderText="Choose parking" ItemsSource="{Binding Parkings , Mode=TwoWay}" DisplayMemberPath="Name" SelectedValuePath="ParkingId" SelectedValue="{Binding SelectedParkingId, Mode=TwoWay}" x:Name="comboBox1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Margin="10,22,10,21.2" Width="196"/>
         <TextBlock FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Text="Price: / h" Margin="0,25,0,0" Grid.Row="2" Grid.Column="0" />
-        <TextBox Text="{Binding Price, Mode=TwoWay}" PlaceholderText="Price/h" x:Name="textBoxPrice" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
-        <Button x:Name="send" Command="{Binding CreateCommand}" Content="Create" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Button x:Name="back" Command="{Binding GoBackCommand}" Content="Back" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock x:Name="textBoxInfosCreateAnnouncement" Grid.Row="8" Width="200" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="{Binding InfosCreateAnnouncement, Mode=TwoWay}" VerticalAlignment="Center"/>
+        <TextBox x:ConnectionId='3' Text="{Binding Price, Mode=TwoWay}" PlaceholderText="Price/h" x:Name="textBoxPrice" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        <Button x:ConnectionId='4' x:Name="send" Command="{Binding CreateCommand}" Content="Create" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:ConnectionId='5' x:Name="back" Command="{Binding GoBackCommand}" Content="Back" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:ConnectionId='6' x:Name="textBoxInfosCreateAnnouncement" Grid.Row="8" Width="200" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="{Binding InfosCreateAnnouncement, Mode=TwoWay}" VerticalAlignment="Center"/>
 
 
     </Grid>
 </Page>
+

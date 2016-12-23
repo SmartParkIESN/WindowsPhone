@@ -105,6 +105,7 @@
     <Compile Include="Exceptions\PlaceException.cs" />
     <Compile Include="Exceptions\PriceException.cs" />
     <Compile Include="Exceptions\PseudoException.cs" />
+    <Compile Include="Exceptions\PseudoExistingException.cs" />
     <Compile Include="Exceptions\StreetException.cs" />
     <Compile Include="Exceptions\TitleException.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -128,7 +129,6 @@
     <Compile Include="ViewModel\MyParkingsViewModel.cs" />
     <Compile Include="ViewModel\WelcomeViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
-    <Compile Include="ViewModel\MessageViewModel.cs" />
     <Compile Include="ViewModel\ProfileViewModel.cs" />
     <Compile Include="ViewModel\SearchViewModel.cs" />
     <Compile Include="ViewModel\SignUpViewModel.cs" />
@@ -153,9 +153,6 @@
     </Compile>
     <Compile Include="View\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Message.xaml.cs">
-      <DependentUpon>Message.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Profile.xaml.cs">
       <DependentUpon>Profile.xaml</DependentUpon>
@@ -219,10 +216,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Login.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Message.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

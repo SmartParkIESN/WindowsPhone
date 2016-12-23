@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-22T21:45:52.323</Modified>
+      <Modified>2016-12-23T16:39:37.841</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\bin\x86\Debug\InterfaceSmartCity.exe">
       <PackagePath>entrypoint\InterfaceSmartCity.exe</PackagePath>
-      <Modified>2016-12-22T21:45:51.792</Modified>
+      <Modified>2016-12-23T16:39:37.431</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas\.nuget\packages\CommonServiceLocator\1.3.0\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
       <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
@@ -516,7 +516,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\bin\x86\Debug\InterfaceSmartCity.xr.xml">
       <PackagePath>InterfaceSmartCity.xr.xml</PackagePath>
-      <Modified>2016-12-22T21:44:28.327</Modified>
+      <Modified>2016-12-23T15:08:37.980</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -525,11 +525,11 @@
     <AppxPackagedFile Include="C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-22T21:45:52.156</Modified>
+      <Modified>2016-12-23T16:17:16.122</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas\Desktop\SmartParkUWP\InterfaceSmartCity\bin\x86\Debug\Core\InterfaceSmartCity.exe">
       <PackagePath>InterfaceSmartCity.exe</PackagePath>
-      <Modified>2016-12-22T21:45:52.321</Modified>
+      <Modified>2016-12-23T16:39:37.838</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

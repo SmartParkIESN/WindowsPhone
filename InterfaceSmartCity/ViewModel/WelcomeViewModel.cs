@@ -15,28 +15,53 @@ using System.Windows.Input;
 using Windows.UI.Xaml.Navigation;
 
 namespace InterfaceSmartCity.ViewModel {
-    public class WelcomeViewModel : ViewModelBase, INotifyPropertyChanged{
+    public class WelcomeViewModel : ViewModelBase, INotifyPropertyChanged {
 
-        private ObservableCollection<Announcement>_announcement;
+        private ObservableCollection<Announcement> _announcement;
         public ObservableCollection<Announcement> Announcements {
             get { return _announcement; }
             set {
                 _announcement = value;
-                RaisePropertyChanged ("Announcements");
+                RaisePropertyChanged("Announcements");
+            }
+        }
+
+        private int[] _tabPrice = new int[2];
+
+        public int[] TabPrice
+        {
+            get { return _tabPrice; }
+            set
+            {
+                _tabPrice = value;
+                loadAnnouncementPrice();
             }
         }
 
         private INavigationService _navigationService = null;
 
         public WelcomeViewModel (INavigationService navigationService) {
-            loadAnnouncement();
+
             _navigationService = navigationService;
+            Messenger.Default.Register<int[]>(this, a => { TabPrice = a; });
+
+            if(TabPrice[0] == 0)
+            {
+                loadAnnouncement();
+            }
         }
 
         private async void loadAnnouncement()
         {
             AnnouncementDAO announcementDAO = new AnnouncementDAO();
             Announcements = new ObservableCollection<Announcement>(await announcementDAO.getAllAnnouncements());
+        }
+
+        
+        private async void loadAnnouncementPrice()
+        {
+            AnnouncementDAO announcementDAO = new AnnouncementDAO();
+            Announcements = new ObservableCollection<Announcement>(await announcementDAO.getAllAnnouncementsPrice(TabPrice[0], TabPrice[1]));
         }
 
 

@@ -18,33 +18,36 @@
             <RowDefinition Height="75"></RowDefinition>
             <RowDefinition Height="75"></RowDefinition>
             <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="216"></ColumnDefinition>
-            <ColumnDefinition Width="400"></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
         </Grid.ColumnDefinitions>
+        
+        <TextBlock FontWeight="Bold" FontSize="23" HorizontalAlignment="Center" Text="Sign Up" Margin="0,20,0,0" Grid.Row="0"  Grid.ColumnSpan="2" Grid.Column="0" />
+        
+        <TextBlock Text="Pseudo : " Grid.Row="1" Grid.Column="0" Margin="69,28,10,27.2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="137"></TextBlock>
+        <TextBox x:Name="textBoxPseudo" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="{Binding Pseudo, Mode=TwoWay}"  VerticalAlignment="Center" Width="150"/>
 
-        <TextBlock Text="Pseudo : " Grid.Row="0" Grid.Column="0" Margin="69,28,10,27.2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="137"></TextBlock>
-        <TextBox x:Name="textBoxPseudo" Grid.Row="0" Grid.Column="1" TextWrapping="Wrap" Text="{Binding Pseudo, Mode=TwoWay}"  VerticalAlignment="Center" Margin="10,22,136,21.2" Width="150"/>
+        <TextBlock Text="Email : " Grid.Row="2" Grid.Column="0" Margin="69,27.8,10,27.4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="137"></TextBlock>
+        <TextBox x:Name="textBoxEmail1" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Text="{Binding Mail, Mode=TwoWay}"  VerticalAlignment="Center"  Width="150"/>
 
-        <TextBlock Text="Email : " Grid.Row="1" Grid.Column="0" Margin="69,27.8,10,27.4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="137"></TextBlock>
-        <TextBox x:Name="textBoxEmail1" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="{Binding Mail, Mode=TwoWay}"  VerticalAlignment="Center" Margin="10,21.8,136,21.4" Width="150"/>
+        <TextBlock Text="Password : " Grid.Row="3" Grid.Column="0" Margin="69,27.6,10,27.6" HorizontalAlignment="Center" VerticalAlignment="Center" Width="137"></TextBlock>
+        <PasswordBox Password="{Binding Password, Mode=TwoWay}" x:Name="textBoxPassword"  Grid.Row="3" Grid.Column="1"  VerticalAlignment="Center"  Width="150"/>
 
-        <TextBlock Text="Password : " Grid.Row="2" Grid.Column="0" Margin="69,27.6,10,27.6" HorizontalAlignment="Center" VerticalAlignment="Center" Width="137"></TextBlock>
-        <PasswordBox Password="{Binding Password, Mode=TwoWay}" x:Name="textBoxPassword"  Grid.Row="2" Grid.Column="1"  VerticalAlignment="Center" Margin="10,21.6,136,21.6" Width="150"/>
+        <TextBlock Text="Password conf : " Grid.Row="4" Grid.Column="0" Margin="69,27.4,10,27.8" HorizontalAlignment="Center" VerticalAlignment="Center" Width="137"></TextBlock>
+        <PasswordBox Password="{Binding PasswordConf, Mode=TwoWay}" x:Name="textBoxPassword2" Grid.Row="4" Grid.Column="1"  VerticalAlignment="Center" Width="150"/>
 
-        <TextBlock Text="Password conf : " Grid.Row="3" Grid.Column="0" Margin="69,27.4,10,27.8" HorizontalAlignment="Center" VerticalAlignment="Center" Width="137"></TextBlock>
-        <PasswordBox Password="{Binding PasswordConf, Mode=TwoWay}" x:Name="textBoxPassword2" Grid.Row="3" Grid.Column="1"  VerticalAlignment="Center" Margin="10,21.4,136,21.8" Width="150"/>
-
-        <TextBlock Text="Phone number : " Grid.Row="4" Grid.Column="0" Margin="69,27.4,10,27.8" HorizontalAlignment="Center" VerticalAlignment="Center" Width="137"></TextBlock>
-        <TextBox x:Name="textBoxPhone" Grid.Row="4" Grid.Column="1" TextWrapping="Wrap" Text="{Binding PhoneNumber, Mode=TwoWay}"  VerticalAlignment="Center" Margin="10,21.4,136,21.8" Width="150"/>
+        <TextBlock Text="Phone number : " Grid.Row="5" Grid.Column="0" Margin="69,27.4,10,27.8" HorizontalAlignment="Center" VerticalAlignment="Center" Width="137"></TextBlock>
+        <TextBox x:Name="textBoxPhone" Grid.Row="5" Grid.Column="1" TextWrapping="Wrap" Text="{Binding PhoneNumber, Mode=TwoWay}"  VerticalAlignment="Center"  Width="150"/>
 
 
-        <Button x:Name="signup" Command="{Binding SignUpCommand}" Content="Sign up" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-        <Button x:Name="back" Command="{Binding GoBackCommand}" Content="Back" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+        <Button x:Name="signup" Command="{Binding SignUpCommand}" Content="Sign up" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+        <Button x:Name="back" Command="{Binding GoBackCommand}" Content="Back" Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
 
-        <TextBlock Text="{Binding InfosSignUp, Mode=TwoWay}" Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="50" Width="300" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="{Binding InfosSignUp, Mode=TwoWay}" Grid.Row="8" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="50" Width="300" VerticalAlignment="Center"></TextBlock>
 
 
     </Grid>

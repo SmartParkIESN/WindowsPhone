@@ -98,6 +98,14 @@ namespace InterfaceSmartCity.Services
                 throw new PasswordVerifException();
             }
 
+            User userVerif = await getUserPseudo(user.Pseudo);
+
+            if(userVerif != null)
+            {
+                throw new PseudoExistingException();
+            }
+
+
 
             var client = new HttpClient();
             user.Password = ComputeMD5(user.Password);
